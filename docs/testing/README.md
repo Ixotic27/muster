@@ -18,6 +18,15 @@ database, deployment, photos and participant records were not used.
   publication privacy and configuration. See [security review](security-review.md)
   and [publication review](publication-review.md).
 
+GitHub's first Linux run passed every backend suite, the API dependency audit
+and privacy scan. Its frontend clean install exposed missing optional peer
+entries in a Windows-generated lockfile. The lockfile was rebuilt in a
+standalone directory with npm 10: Linux-targeted clean-install validation and
+an actual Windows clean install passed, followed by all 85 client tests, the
+production build and a zero-finding full audit. No application code or existing
+dependency versions changed in this portability correction. Latest hosted
+results are available in [GitHub Actions](https://github.com/Ixotic27/event-management-template/actions/workflows/ci.yml).
+
 ## Browser checks
 
 The local interface at port 4120 used an isolated API at port 4121. Desktop
