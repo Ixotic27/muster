@@ -1,7 +1,9 @@
-# Deploy your own event portal
+# Deploy the Muster backend
 
-Deploy this template as your own frontend and API, with your own MongoDB replica
-set and provider accounts. Nothing is linked to the original event's hosting,
+Deploy `backend/` as an independent API, with your own MongoDB replica
+set and provider accounts. The bundled frontend is an optional reference client;
+connect your own website or app using the [integration guide](integration.md).
+Nothing is linked to the original event's hosting,
 database, GitHub workflows, cloud assets or email accounts.
 
 ## Configuration checklist
@@ -32,12 +34,14 @@ proxy, use `https://events.example.com/api/v1/auth/google/callback`. If using a
 separate API origin, begin and complete OAuth on that API origin; do not switch
 hosts between the two steps. Do not copy another application's OAuth identifiers.
 
-## Frontend and API
+## API and optional reference client
 
-Build the frontend with `npm run build` and publish its generated static output.
+Start the API with `npm start --prefix backend`. Run the email worker separately
+as described below. No frontend build is required to operate the API.
+
+If using the reference client, build it with `npm run build` and publish its generated static output.
 Configure single-page routing so paths such as `/dashboard` and
-`/invitations/:id` serve the frontend entry page. The API runs separately using
-`npm start --prefix backend`; route `/api` to it or configure the frontend's
+`/invitations/:id` serve the frontend entry page. Route `/api` to the backend or configure the frontend's
 public API URL during build.
 
 Production requires HTTPS. Keep API and frontend behind the same site when

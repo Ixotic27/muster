@@ -1,4 +1,7 @@
-# Website workflow
+# Reference-client workflows
+
+These screens demonstrate the reusable Muster API. Adopters can implement the
+same workflows in their own frontend; this React client is optional.
 
 ## Discover, register, pay, attend
 
@@ -44,7 +47,10 @@ private QR; one shared team QR is not mailed to everyone.
 Account creation, password changes/reset, invitations and responses,
 registration creation, payment updates, document decisions, pass issuance,
 withdrawals/refund decisions and upcoming-event reminders use the same durable
-delivery system. Business updates and their email jobs commit together. Sending
+delivery system. Transactional business updates and their email jobs commit together.
+Preparing a password-reset request saves its reset token before separately
+creating its email job; that particular request is not atomic. See the
+[low-level design](architecture/low-level-design.md) for transaction boundaries. Sending
 occurs afterwards; retries use deduplication keys and recheck access before
 delivery. Provider outages do not erase a successful registration.
 
