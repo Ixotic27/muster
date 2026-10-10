@@ -1,0 +1,15 @@
+EventFlow
+
+Your refund request has been received
+
+Why you received this email: Your withdrawal and refund request was received.
+
+The organizers have received your withdrawal and refund request.
+
+They will review the request according to the event refund policy and update your account.
+
+Open your account to review the current status and any remaining actions.
+
+https://events.example.com/dashboard
+
+Keep your password and entry QR private. This message does not ask you to share a password or payment PIN.

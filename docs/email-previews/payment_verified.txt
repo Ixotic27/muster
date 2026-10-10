@@ -1,0 +1,15 @@
+EventFlow
+
+Your payment has been verified
+
+Why you received this email: Payment for your event registration was successfully verified.
+
+Payment for your Design Sprint registration has been verified successfully.
+
+You can review the payment receipt and your registration status in your account.
+
+Open your registration to view the receipt and any remaining document requirements. Your pass is issued after all requirements are satisfied.
+
+https://events.example.com/dashboard
+
+Keep your password and entry QR private. This message does not ask you to share a password or payment PIN.

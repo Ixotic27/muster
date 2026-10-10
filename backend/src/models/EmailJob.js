@@ -1,0 +1,36 @@
+const mongoose = require('mongoose');
+const schema = new mongoose.Schema({
+  dedupeKey: { type: String, required: true, unique: true },
+  to: { type: String, required: true },
+  subject: { type: String, required: true },
+  text: { type: String, required: true, select: false },
+  link: { type: String, select: false },
+  kind: { type: String, default: 'notification' },
+  notificationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Notification' },
+  inviteId: { type: mongoose.Schema.Types.ObjectId, ref: 'TeamInvite' },
+  passId: { type: mongoose.Schema.Types.ObjectId, ref: 'Pass' },
+  registrationId: { type: mongoose.Schema.Types.ObjectId, ref: 'Registration' },
+  eventId: { type: mongoose.Schema.Types.ObjectId, ref: 'Event' },
+  teamId: { type: mongoose.Schema.Types.ObjectId, ref: 'Team' },
+  recipientId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  audience: { type: String, enum: ['participant', 'staff'] },
+  staffActivationUserId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  staffActivationVersion: String,
+  staffDisplayName: String,
+  reminderDeadline: Date,
+  reminderCheckpoint: String,
+  reminderCheckpointEndsAt: Date,
+  reminderFormationDeadline: Date,
+  reminderPaymentDeadline: Date,
+  status: { type: String, enum: ['queued', 'processing', 'sent', 'failed', 'cancelled'], default: 'queued' },
+  attempts: { type: Number, default: 0 },
+  availableAt: { type: Date, default: Date.now },
+  expiresAt: Date,
+  leaseUntil: Date,
+  sentAt: Date,
+  sender: String,
+  lastError: String,
+  priority: { type: Number, default: 0 }
+}, { timestamps: true });
+schema.index({ status: 1, priority: -1, availableAt: 1 });
+module.exports = mongoose.model('EmailJob', schema);

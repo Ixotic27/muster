@@ -1,0 +1,16 @@
+{
+  "name": "event-management-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EventFlow: reusable event registration, team, payment, email and attendance workflows",
+  "license": "ISC",
+  "engines": { "node": ">=22.12" },
+  "scripts": {
+    "install:all": "npm ci --prefix backend && npm ci --prefix frontend",
+    "dev:api": "npm run dev --prefix backend",
+    "dev:web": "npm start --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "test:privacy": "node scripts/check-publication.js",
+    "diagrams": "python scripts/generate-diagrams.py"
+  }
+}

@@ -1,0 +1,19 @@
+.participant-counts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.participant-counts button { display: grid; text-align: left; gap: 7px; padding: 18px 14px; border: 1px solid #d1bcea; border-radius: 10px; background: #eee6fc; color: #291a37; font: inherit; cursor: pointer; min-width: 0; }
+.participant-counts button[aria-pressed="true"] { border: 2px solid #6c30c1; padding: 17px 13px; background: #e7daf9; }
+.participant-counts strong { font-size: 2rem; line-height: 1.1; }
+.participant-counts small { color: #675473; }
+.participant-roster .roster-row { display: block; }
+.participant-roster .roster-row summary { cursor: pointer; min-height: 44px; padding: 4px 0; overflow-wrap: anywhere; }
+.roster-summary { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; max-width: calc(100% - 24px); vertical-align: middle; }
+.roster-summary strong { flex: 1 1 180px; }
+.roster-members { display: grid; gap: 16px; margin: 16px 0 0; padding: 0; list-style: none; }
+.roster-member { padding: 16px; border: 1px solid #e0d8e6; border-radius: 8px; overflow-wrap: anywhere; }
+.roster-member[data-matches-filter="false"] { background: #f5f1f8; }
+.roster-member-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.roster-member .summary-list { margin-bottom: 0; }
+.registration-control-fields { border: 0; margin: 0; padding: 0; min-width: 0; }
+.participant-roster .button-row { margin: 14px 0; }
+.registration-controls p { max-width: 75ch; }
+.participant-counts button:focus-visible, .participant-roster summary:focus-visible { outline: 3px solid #6c30c1; outline-offset: 3px; }
+@media(max-width:760px) { .participant-counts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .participant-counts button { padding: 16px 12px; } .participant-counts button[aria-pressed="true"] { padding: 15px 11px; } .participant-counts strong { font-size: 1.8rem; } .roster-member { padding: 12px; } .roster-summary { gap: 8px; } .roster-summary strong { flex-basis: 100%; } }

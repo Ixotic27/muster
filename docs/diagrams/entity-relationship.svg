@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1410" viewBox="0 0 1760 1410" role="img" aria-labelledby="title desc">
+<title id="title">EventFlow · Entity relationship diagram</title><desc id="desc">MongoDB logical model • refs are application-enforced; embedded team members are not a separate collection.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8293ad"/></marker></defs>
+<rect width="1760" height="1410" fill="#f4f7fb"/>
+<g font-family="Arial, sans-serif">
+<text x="60" y="65" font-size="32" font-weight="700" fill="#14233b">EventFlow · Entity relationship diagram</text>
+<text x="60" y="106" font-size="17" fill="#52627a">MongoDB logical model • refs are application-enforced; embedded team members are not a separate collection.</text>
+<path d="M 380,290.0 L 500,290.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="405.0" y="264.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="440.0" y="281.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
+<path d="M 820,290.0 L 940,290.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="845.0" y="264.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="281.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
+<path d="M 120,410 L 120,580" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="135.75" y="479" width="142.5" height="24" rx="5" fill="#f4f7fb"/><text x="207" y="496" text-anchor="middle" font-size="13" fill="#52627a">many ↔ many · staff</text>
+<path d="M 660,410 L 660,580" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="678.5" y="479" width="135.0" height="24" rx="5" fill="#f4f7fb"/><text x="746" y="496" text-anchor="middle" font-size="13" fill="#52627a">1 → 0..1 per event</text>
+<path d="M 380,700.0 L 500,700.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="405.0" y="674.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="440.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
+<path d="M 820,700.0 L 940,700.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="845.0" y="674.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
+<path d="M 1260,700.0 L 1380,700.0" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="1282.5" y="674.0" width="75.0" height="24" rx="5" fill="#f4f7fb"/><text x="1320.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">0..1 order</text>
+<path d="M 135,820 L 135,990" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="160.0" y="891" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="195" y="908" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
+<path d="M 500,790 L 420,790 L 420,1060 L 380,1060" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="358.25" y="924" width="187.5" height="24" rx="5" fill="#f4f7fb"/><text x="452" y="941" text-anchor="middle" font-size="13" fill="#52627a">1 → many · one per member</text>
+<path d="M 660,820 L 660,990" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="673.0" y="891" width="150.0" height="24" rx="5" fill="#f4f7fb"/><text x="748" y="908" text-anchor="middle" font-size="13" fill="#52627a">1 → many · lifecycle</text>
+<path d="M 820,1110.0 L 940,1110.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="831.25" y="1084.0" width="97.5" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="1101.0" text-anchor="middle" font-size="13" fill="#52627a">0..1 mail job</text>
+<path d="M 210,170 L 210,144 L 1540,144 L 1540,170" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="821.25" y="125" width="97.5" height="24" rx="5" fill="#f4f7fb"/><text x="870" y="142" text-anchor="middle" font-size="13" fill="#52627a">staff actions</text>
+<rect x="60" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
+<rect x="62" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
+<rect x="62" y="199" width="316" height="22" fill="#2855d9"/>
+<text x="80" y="203" font-size="19" font-weight="700" fill="white">User</text>
+<text x="80" y="250" font-size="15" fill="#14233b">_id · PK</text>
+<text x="80" y="277" font-size="15" fill="#14233b">email · unique</text>
+<text x="80" y="304" font-size="15" fill="#14233b">name / optional profile</text>
+<text x="80" y="331" font-size="15" fill="#14233b">role / assignedEvents[]</text>
+<text x="80" y="358" font-size="15" fill="#14233b">passwordHash · hidden</text>
+<rect x="500" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
+<rect x="502" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
+<rect x="502" y="199" width="316" height="22" fill="#2855d9"/>
+<text x="520" y="203" font-size="19" font-weight="700" fill="white">Team</text>
+<text x="520" y="250" font-size="15" fill="#14233b">_id · PK</text>
+<text x="520" y="277" font-size="15" fill="#14233b">eventId / leaderId · refs</text>
+<text x="520" y="304" font-size="15" fill="#14233b">joinCode · unique</text>
+<text x="520" y="331" font-size="15" fill="#14233b">members[] · embedded</text>
+<text x="520" y="358" font-size="15" fill="#14233b">status / closedRoster[]</text>
+<rect x="940" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
+<rect x="942" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
+<rect x="942" y="199" width="316" height="22" fill="#2855d9"/>
+<text x="960" y="203" font-size="19" font-weight="700" fill="white">TeamInvite</text>
+<text x="960" y="250" font-size="15" fill="#14233b">_id · PK</text>
+<text x="960" y="277" font-size="15" fill="#14233b">teamId / eventId · refs</text>
+<text x="960" y="304" font-size="15" fill="#14233b">invitedBy / invitedUser</text>
+<text x="960" y="331" font-size="15" fill="#14233b">invitedEmail / tokenHash</text>
+<text x="960" y="358" font-size="15" fill="#14233b">status / expiresAt</text>
+<rect x="1380" y="170" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
+<rect x="1382" y="172" width="316" height="49" rx="10" fill="#7951b0"/>
+<rect x="1382" y="199" width="316" height="22" fill="#7951b0"/>
+<text x="1400" y="203" font-size="19" font-weight="700" fill="white">AdminAction</text>
+<text x="1400" y="250" font-size="15" fill="#14233b">_id · PK</text>
+<text x="1400" y="277" font-size="15" fill="#14233b">actorId · User ref</text>
+<text x="1400" y="304" font-size="15" fill="#14233b">targetType / targetId</text>
+<text x="1400" y="331" font-size="15" fill="#14233b">action / details</text>
+<text x="1400" y="358" font-size="15" fill="#14233b">createdAt / requestId</text>
+<rect x="60" y="580" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
+<rect x="62" y="582" width="316" height="49" rx="10" fill="#2855d9"/>
+<rect x="62" y="609" width="316" height="22" fill="#2855d9"/>
+<text x="80" y="613" font-size="19" font-weight="700" fill="white">Event</text>
+<text x="80" y="660" font-size="15" fill="#14233b">_id · PK / slug · unique</text>
+<text x="80" y="687" font-size="15" fill="#14233b">name / date / venue</text>
+<text x="80" y="714" font-size="15" fill="#14233b">participation / team bounds</text>
+<text x="80" y="741" font-size="15" fill="#14233b">feeInr / capacity / deadline</text>
+<text x="80" y="768" font-size="15" fill="#14233b">status: draft → published</text>
+<rect x="500" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
+<rect x="502" y="582" width="316" height="49" rx="10" fill="#087f78"/>
+<rect x="502" y="609" width="316" height="22" fill="#087f78"/>
+<text x="520" y="613" font-size="19" font-weight="700" fill="white">Registration</text>
+<text x="520" y="660" font-size="15" fill="#14233b">_id · PK / regId · unique</text>
+<text x="520" y="687" font-size="15" fill="#14233b">eventId / leaderId / teamId</text>
+<text x="520" y="714" font-size="15" fill="#14233b">feeSnapshotInr / paymentId</text>
+<text x="520" y="741" font-size="15" fill="#14233b">status / document approval</text>
+<text x="520" y="768" font-size="15" fill="#14233b">refund review fields</text>
+<rect x="940" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
+<rect x="942" y="582" width="316" height="49" rx="10" fill="#087f78"/>
+<rect x="942" y="609" width="316" height="22" fill="#087f78"/>
+<text x="960" y="613" font-size="19" font-weight="700" fill="white">Payment</text>
+<text x="960" y="660" font-size="15" fill="#14233b">_id · PK</text>
+<text x="960" y="687" font-size="15" fill="#14233b">registrationId / payerId</text>
+<text x="960" y="714" font-size="15" fill="#14233b">amountInr / currency</text>
+<text x="960" y="741" font-size="15" fill="#14233b">reference / provider</text>
+<text x="960" y="768" font-size="15" fill="#14233b">status / reviewedAt</text>
+<rect x="1380" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
+<rect x="1382" y="582" width="316" height="49" rx="10" fill="#087f78"/>
+<rect x="1382" y="609" width="316" height="22" fill="#087f78"/>
+<text x="1400" y="613" font-size="19" font-weight="700" fill="white">GatewayOrder</text>
+<text x="1400" y="660" font-size="15" fill="#14233b">_id · PK</text>
+<text x="1400" y="687" font-size="15" fill="#14233b">registrationId / payerId</text>
+<text x="1400" y="714" font-size="15" fill="#14233b">providerOrderId · unique</text>
+<text x="1400" y="741" font-size="15" fill="#14233b">amountPaise / currency</text>
+<text x="1400" y="768" font-size="15" fill="#14233b">provider payment / status</text>
+<rect x="60" y="990" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
+<rect x="62" y="992" width="316" height="49" rx="10" fill="#7951b0"/>
+<rect x="62" y="1019" width="316" height="22" fill="#7951b0"/>
+<text x="80" y="1023" font-size="19" font-weight="700" fill="white">Pass</text>
+<text x="80" y="1070" font-size="15" fill="#14233b">_id · PK / passId · unique</text>
+<text x="80" y="1097" font-size="15" fill="#14233b">registrationId / userId</text>
+<text x="80" y="1124" font-size="15" fill="#14233b">eventId / signed token</text>
+<text x="80" y="1151" font-size="15" fill="#14233b">status / expiresAt</text>
+<text x="80" y="1178" font-size="15" fill="#14233b">checkInStatus / scannedBy</text>
+<rect x="500" y="990" width="320" height="240" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
+<rect x="502" y="992" width="316" height="49" rx="10" fill="#a6640c"/>
+<rect x="502" y="1019" width="316" height="22" fill="#a6640c"/>
+<text x="520" y="1023" font-size="19" font-weight="700" fill="white">Notification</text>
+<text x="520" y="1070" font-size="15" fill="#14233b">_id · PK / userId · ref</text>
+<text x="520" y="1097" font-size="15" fill="#14233b">type / title / message</text>
+<text x="520" y="1124" font-size="15" fill="#14233b">registration/event/pass refs</text>
+<text x="520" y="1151" font-size="15" fill="#14233b">readAt / emailStatus</text>
+<text x="520" y="1178" font-size="15" fill="#14233b">dedupeKey</text>
+<rect x="940" y="990" width="320" height="240" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
+<rect x="942" y="992" width="316" height="49" rx="10" fill="#a6640c"/>
+<rect x="942" y="1019" width="316" height="22" fill="#a6640c"/>
+<text x="960" y="1023" font-size="19" font-weight="700" fill="white">EmailJob</text>
+<text x="960" y="1070" font-size="15" fill="#14233b">_id · PK / dedupeKey · unique</text>
+<text x="960" y="1097" font-size="15" fill="#14233b">recipient / notification refs</text>
+<text x="960" y="1124" font-size="15" fill="#14233b">kind / rendered content</text>
+<text x="960" y="1151" font-size="15" fill="#14233b">status / availableAt</text>
+<text x="960" y="1178" font-size="15" fill="#14233b">attempts / lease / sentAt</text>
+<rect x="1380" y="990" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
+<rect x="1382" y="992" width="316" height="49" rx="10" fill="#7951b0"/>
+<rect x="1382" y="1019" width="316" height="22" fill="#7951b0"/>
+<text x="1400" y="1023" font-size="19" font-weight="700" fill="white">Supporting collections</text>
+<text x="1400" y="1070" font-size="15" fill="#14233b">StoredFile · private uploads</text>
+<text x="1400" y="1097" font-size="15" fill="#14233b">AppConfig · event settings</text>
+<text x="1400" y="1124" font-size="15" fill="#14233b">EmailSender · daily budgets</text>
+<text x="1400" y="1151" font-size="15" fill="#14233b">WorkerLease · job exclusion</text>
+<text x="1400" y="1178" font-size="15" fill="#14233b">No live data in repository</text>
+<text x="60" y="1294" font-size="15" fill="#52627a">PK = primary identifier. Arrow labels describe logical cardinality; this diagram highlights the main workflow references.</text>
+<text x="60" y="1334" font-size="15" fill="#52627a">Each accepted teammate receives a separate pass. Scan state belongs to that pass; payment belongs to the registration.</text>
+<text x="60" y="1374" font-size="15" fill="#52627a">Refunds are review fields on Registration. Capacity and roster snapshots preserve historical decisions.</text>
+</g></svg>

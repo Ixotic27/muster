@@ -1,0 +1,14 @@
+const express = require('express');
+const Joi = require('joi');
+const { authenticate } = require('../middleware/auth.middleware');
+const { paymentLimiter } = require('../middleware/rateLimiter.middleware');
+const { validate } = require('../middleware/validate.middleware');
+const { asyncHandler } = require('../utils/helpers');
+const controller = require('../controllers/gateway.controller');
+const router = express.Router();
+router.get('/config', controller.config);
+router.use(authenticate);
+const registrationId = Joi.string().hex().length(24).required();
+router.post('/orders', paymentLimiter, validate(Joi.object({ registrationId })), asyncHandler(controller.orders));
+router.post('/verify', paymentLimiter, validate(Joi.object({ registrationId, razorpay_order_id: Joi.string().pattern(/^order_[a-zA-Z0-9]{1,100}$/).required(), razorpay_payment_id: Joi.string().pattern(/^pay_[a-zA-Z0-9]{1,100}$/).required(), razorpay_signature: Joi.string().hex().length(64).required() })), asyncHandler(controller.verify));
+module.exports = router;

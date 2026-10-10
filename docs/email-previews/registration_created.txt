@@ -1,0 +1,15 @@
+EventFlow
+
+Your event registration is recorded
+
+Why you received this email: An event registration was created for you or your team.
+
+Your registration for Community Workshop has been created.
+
+Check your dashboard for its current status and any remaining requirements.
+
+Open your account to review the current status and any remaining actions.
+
+https://events.example.com/dashboard
+
+Keep your password and entry QR private. This message does not ask you to share a password or payment PIN.

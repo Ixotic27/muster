@@ -1,0 +1,51 @@
+{
+  "name": "event-management-api",
+  "version": "1.0.0",
+  "description": "Reusable event registration, payments, email and attendance API",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node src/utils/seedEvents.js",
+    "bootstrap:admin": "node scripts/bootstrap-admin.js",
+    "worker": "node scripts/email-worker.js",
+    "test": "node scripts/template-integration.js && node scripts/gateway-security-integration.js && node scripts/participant-roster-integration.js && node scripts/security-smoke-integration.js && node scripts/private-upload-integration.js && node scripts/socket-password-security-integration.js && node scripts/oauth-security-test.js && node scripts/email-worker-integration.js && node scripts/manual-payment-policy-test.js && node scripts/email-review-security-test.js",
+    "test:gateway": "node scripts/gateway-security-integration.js",
+    "worker:once": "node scripts/email-worker.js --once",
+    "dev:fixtures": "node scripts/local-fixtures.js"
+  },
+  "keywords": [
+    "events",
+    "express",
+    "mongodb",
+    "qr-code"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^2.11.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.0.14",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.4.3",
+    "prettier": "^3.9.9"
+  }
+}

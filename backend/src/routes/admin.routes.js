@@ -1,0 +1,31 @@
+const express = require('express');
+const Joi = require('joi');
+const { authenticate } = require('../middleware/auth.middleware');
+const { requireRole } = require('../middleware/role.middleware');
+const { asyncHandler } = require('../utils/helpers');
+const { validate } = require('../middleware/validate.middleware');
+const { paymentQueue, verifyPayment, rejectPayment, verifyNoc, dashboard, refundQueue, approveRefundRequest, rejectRefundRequest, listUsers, changeUserRole, auditLogs, registrationQueue } = require('../controllers/admin.controller');
+
+const router = express.Router();
+router.use(authenticate, requireRole('admin', 'super_admin'));
+const emailAdmin = require('../controllers/email-admin.controller');
+router.get('/emails', asyncHandler(emailAdmin.status));
+router.post('/emails/:id/retry', asyncHandler(emailAdmin.retry));
+router.post('/email-senders/:sender/resume', asyncHandler(emailAdmin.resume));
+router.get('/dashboard', asyncHandler(dashboard));
+router.get('/payments', asyncHandler(paymentQueue));
+router.get('/registrations', asyncHandler(registrationQueue));
+router.get('/roster/export', asyncHandler(require('../controllers/participant-roster.controller').exportRoster));
+router.get('/roster', asyncHandler(require('../controllers/participant-roster.controller').roster));
+router.get('/registrations/:id', asyncHandler(require('../controllers/admin.controller').registrationDetails));
+router.post('/payments/:id/verify', asyncHandler(verifyPayment));
+router.post('/payments/:id/reject', validate(Joi.object({ reason: Joi.string().trim().min(3).max(500).required() })), asyncHandler(rejectPayment));
+router.post('/noc/:registrationId/verify', asyncHandler(verifyNoc));
+router.get('/refunds', asyncHandler(refundQueue));
+router.post('/refunds/:registrationId/approve', validate(Joi.object({ confirmed: Joi.boolean().valid(true).required(), reference: Joi.string().trim().min(3).max(120).required(), paymentReceivedConfirmed: Joi.boolean() })), asyncHandler(approveRefundRequest));
+router.post('/refunds/:registrationId/reject', validate(Joi.object({ reason: Joi.string().trim().min(3).max(500).required() })), asyncHandler(rejectRefundRequest));
+router.get('/users', asyncHandler(listUsers));
+router.patch('/users/:userId/role', validate(Joi.object({ role: Joi.string().valid('student', 'organizer', 'admin', 'super_admin').required() })), asyncHandler(changeUserRole));
+router.get('/audit-logs', asyncHandler(auditLogs));
+
+module.exports = router;

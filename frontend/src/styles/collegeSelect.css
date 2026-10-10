@@ -1,0 +1,15 @@
+.college-select { position: relative; }
+.college-select.is-open { z-index: 30; }
+.college-select-control { position: relative; min-width: 0; }
+.college-select .college-select-trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-width: 0; min-height: 48px; padding: 12px 14px; border: 1px solid #bdb8c9; border-radius: 8px; background: #fff; color: #17151c; font: inherit; font-weight: 400; text-align: left; cursor: pointer; }
+.college-select-trigger span, .college-select-option span { overflow-wrap: anywhere; }
+.college-select-trigger svg, .college-select-option svg { flex-shrink: 0; color: #692bc2; }
+.college-select .college-select-trigger:hover { border-color: #7533db; }
+.college-select .college-select-trigger[aria-expanded="true"] { border-color: #7533db; box-shadow: 0 0 0 2px #7533db20; }
+.college-select .college-select-trigger:focus-visible, .college-select .college-select-option:focus-visible { outline: 3px solid #7533db; outline-offset: 3px; }
+.college-select-menu { position: absolute; inset: calc(100% + 7px) 0 auto; margin: 0; padding: 6px; list-style: none; border: 1px solid #d7c7ee; border-radius: 12px; background: #fff; box-shadow: 0 8px 24px #3510641c; }
+.college-select-menu.opens-above { inset: auto 0 calc(100% + 7px); }
+.college-select .college-select-option { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 48px; padding: 12px; border: 0; border-radius: 8px; background: #f0e8fc; color: #482080; font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.college-select .college-select-option:hover { background: #e8dafb; }
+.college-select label { cursor: pointer; }
+@media(max-width:760px) { .college-select .college-select-trigger, .college-select .college-select-option { font-size: 1rem; } }
