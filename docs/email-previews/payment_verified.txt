@@ -1,4 +1,4 @@
-EventFlow
+Muster
 
 Your payment has been verified
 

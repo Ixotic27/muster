@@ -110,7 +110,7 @@ async function processEmailQueue({ transportFor = getEmailTransporter, prepare =
           continue;
         }
         const account = accounts.find(a => a.id === sender._id);
-        const result = await transportFor(account).sendMail({ ...message, from: { name: process.env.BRAND_NAME || 'EventFlow', address: account.email },
+        const result = await transportFor(account).sendMail({ ...message, from: { name: process.env.BRAND_NAME || 'Muster', address: account.email },
           ...(account.replyTo ? { replyTo: account.replyTo } : {}), messageId: '<' + job._id + '@' + account.email.split('@')[1] + '>' });
         if (!result.accepted?.length) { const error = new Error('SMTP_REJECTED'); error.code = 'EENVELOPE'; throw error; }
         await EmailJob.updateOne({ _id: job._id }, { $set: { status: 'sent', sentAt: new Date(), lastError: null }, $unset: { text: 1, link: 1, leaseUntil: 1 } });

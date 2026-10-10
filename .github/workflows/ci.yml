@@ -20,6 +20,7 @@ jobs:
       - run: npm test --prefix backend
       - run: npm audit --omit=dev --prefix backend
       - run: npm run test:privacy
+      - run: python scripts/check-architecture.py
   web:
     runs-on: ubuntu-latest
     timeout-minutes: 15

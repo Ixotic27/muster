@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1600" viewBox="0 0 2200 1600" role="img" aria-labelledby="title description">
+<title id="title">Muster | Membership and message-delivery ER views</title>
+<desc id="description">Separate bounded views keep notation readable; repeated User boxes represent the same physical users collection. Conventional crow’s-foot cardinalities, square entity tables, and undirected relationship lines.</desc>
+<rect width="2200" height="1600" fill="#ffffff"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#203044">
+<text x="60" y="44" font-size="34" font-weight="700" text-anchor="start" fill="#203044">Muster | Membership and message-delivery ER views</text>
+<text x="60" y="93" font-size="17" font-weight="400" text-anchor="start" fill="#556577">Separate bounded views keep notation readable; repeated User boxes represent the same physical users collection.</text>
+<path d="M 60,125 L 2140,125" fill="none" stroke="#c8d2dd" stroke-width="1.7"/>
+<text x="60" y="157" font-size="18" font-weight="700" text-anchor="start" fill="#203044">A. TEAM MEMBERSHIP &amp; INVITATIONS</text>
+<text x="1240" y="157" font-size="18" font-weight="700" text-anchor="start" fill="#203044">B. NOTIFICATIONS &amp; EMAIL OUTBOX</text>
+<path d="M 450,290 L 600,290" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 457.0,282.0 L 457.0,298.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 465.0,282.0 L 465.0,298.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,298.0 L 585.0,290.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,290.0 L 585.0,290.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,282.0 L 585.0,290.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="575.0" cy="290.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="452.95" y="252" width="144.1" height="25" fill="white"/>
+<text x="525" y="269" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">invites as sender</text>
+<path d="M 450,365 L 600,365" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 457.0,357.0 L 457.0,373.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="471.0" cy="365.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<path d="M 599.0,373.0 L 585.0,365.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,365.0 L 585.0,365.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,357.0 L 585.0,365.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="575.0" cy="365.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="460.25" y="380" width="129.5" height="25" fill="white"/>
+<text x="525" y="397" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">invited account</text>
+<path d="M 450,810 L 530,810 L 530,494 L 600,494" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 457.0,802.0 L 457.0,818.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 465.0,802.0 L 465.0,818.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,502.0 L 585.0,494.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,494.0 L 585.0,494.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,486.0 L 585.0,494.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="575.0" cy="494.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="461.6" y="648" width="136.8" height="25" fill="white"/>
+<text x="530" y="665" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">team invitations</text>
+<path d="M 450,915 L 600,915" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 457.0,907.0 L 457.0,923.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 465.0,907.0 L 465.0,923.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,923.0 L 585.0,915.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,915.0 L 585.0,915.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 599.0,907.0 L 585.0,915.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="575.0" cy="915.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="493.1" y="872" width="63.8" height="25" fill="white"/>
+<text x="525" y="889" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">embeds</text>
+<path d="M 255,220 L 255,185 L 1090,185 L 1090,830 L 990,830" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 247.0,213.0 L 263.0,213.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 247.0,205.0 L 263.0,205.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 991.0,822.0 L 1005.0,830.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 991.0,830.0 L 1005.0,830.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 991.0,838.0 L 1005.0,830.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1015.0" cy="830.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1028.9" y="594" width="122.2" height="25" fill="white"/>
+<text x="1090" y="611" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">member account</text>
+<path d="M 1630,310 L 1740,310" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1637.0,302.0 L 1637.0,318.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1645.0,302.0 L 1645.0,318.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1739.0,318.0 L 1725.0,310.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1739.0,310.0 L 1725.0,310.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1739.0,302.0 L 1725.0,310.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1715.0" cy="310.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1645.8" y="272" width="78.4" height="25" fill="white"/>
+<text x="1685" y="289" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">receives</text>
+<path d="M 1935,494 L 1935,800" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1943.0,501.0 L 1927.0,501.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1935.0" cy="515.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<path d="M 1927.0,799.0 L 1935.0,785.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1935.0,799.0 L 1935.0,785.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1943.0,799.0 L 1935.0,785.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1935.0" cy="775.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1952.55" y="635" width="114.89999999999999" height="25" fill="white"/>
+<text x="2010" y="652" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">delivery jobs</text>
+<path d="M 1435,404 L 1435,1040 L 1740,1040" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1443.0,411.0 L 1427.0,411.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1435.0" cy="425.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<path d="M 1739.0,1048.0 L 1725.0,1040.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1739.0,1040.0 L 1725.0,1040.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1739.0,1032.0 L 1725.0,1040.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1715.0" cy="1040.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1499.3" y="1001" width="151.4" height="25" fill="white"/>
+<text x="1575" y="1018" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">optional recipient</text>
+<rect x="60" y="220" width="390" height="184" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="60" y="220" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="74" y="246" font-size="20" font-weight="700">User</text>
+<text x="74" y="269" font-size="13" fill="#556577">users • identity context</text>
+<rect x="60" y="284" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="305" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="143" y="305" font-size="15">_id</text>
+<text x="438" y="305" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="60" y="314" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="335" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="143" y="335" font-size="15">email</text>
+<text x="438" y="335" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="60" y="344" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="365" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="365" font-size="15">name</text>
+<text x="438" y="365" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="60" y="374" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="395" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="395" font-size="15">isActive</text>
+<text x="438" y="395" font-size="12" text-anchor="end" fill="#556577">bool</text>
+<rect x="600" y="220" width="390" height="274" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="600" y="220" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="614" y="246" font-size="20" font-weight="700">TeamInvite</text>
+<text x="614" y="269" font-size="13" fill="#556577">collection: teaminvites</text>
+<rect x="600" y="284" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="305" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="683" y="305" font-size="15">_id</text>
+<text x="978" y="305" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="600" y="314" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="335" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="683" y="335" font-size="15">teamId / eventId</text>
+<text x="978" y="335" font-size="12" text-anchor="end" fill="#556577">Team / Event</text>
+<rect x="600" y="344" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="365" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="683" y="365" font-size="15">invitedBy</text>
+<text x="978" y="365" font-size="12" text-anchor="end" fill="#556577">User</text>
+<rect x="600" y="374" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="395" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="683" y="395" font-size="15">invitedUser</text>
+<text x="978" y="395" font-size="12" text-anchor="end" fill="#556577">User?</text>
+<rect x="600" y="404" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="425" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="425" font-size="15">invitedEmail</text>
+<text x="978" y="425" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="600" y="434" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="455" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="455" font-size="15">status / expiresAt</text>
+<text x="978" y="455" font-size="12" text-anchor="end" fill="#556577">enum / date</text>
+<rect x="600" y="464" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="485" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="485" font-size="15">tokenHash</text>
+<text x="978" y="485" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="60" y="750" width="390" height="244" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="60" y="750" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="74" y="776" font-size="20" font-weight="700">Team</text>
+<text x="74" y="799" font-size="13" fill="#556577">teams • ownership context</text>
+<rect x="60" y="814" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="835" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="143" y="835" font-size="15">_id</text>
+<text x="438" y="835" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="60" y="844" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="865" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="143" y="865" font-size="15">eventId / leaderId</text>
+<text x="438" y="865" font-size="12" text-anchor="end" fill="#556577">Event / User</text>
+<rect x="60" y="874" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="895" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="895" font-size="15">members[]</text>
+<text x="438" y="895" font-size="12" text-anchor="end" fill="#556577">embedded[]</text>
+<rect x="60" y="904" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="925" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="925" font-size="15">closedRoster[]</text>
+<text x="438" y="925" font-size="12" text-anchor="end" fill="#556577">embedded[]?</text>
+<rect x="60" y="934" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="955" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="955" font-size="15">rosterVersion</text>
+<text x="438" y="955" font-size="12" text-anchor="end" fill="#556577">number</text>
+<rect x="60" y="964" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="985" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="985" font-size="15">status</text>
+<text x="438" y="985" font-size="12" text-anchor="end" fill="#556577">enum</text>
+<rect x="600" y="750" width="390" height="214" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="600" y="750" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="614" y="776" font-size="20" font-weight="700">Team.members[]</text>
+<text x="614" y="799" font-size="13" fill="#556577">embedded values • no collection / no _id</text>
+<rect x="600" y="814" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="835" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="683" y="835" font-size="15">userId</text>
+<text x="978" y="835" font-size="12" text-anchor="end" fill="#556577">User</text>
+<rect x="600" y="844" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="865" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="865" font-size="15">nameSnapshot</text>
+<text x="978" y="865" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="600" y="874" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="895" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="895" font-size="15">emailSnapshot</text>
+<text x="978" y="895" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="600" y="904" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="925" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="925" font-size="15">studentIdSnapshot</text>
+<text x="978" y="925" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="600" y="934" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="612" y="955" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="683" y="955" font-size="15">status / joinedAt</text>
+<text x="978" y="955" font-size="12" text-anchor="end" fill="#556577">enum / date</text>
+<rect x="1240" y="220" width="390" height="184" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="1240" y="220" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="1254" y="246" font-size="20" font-weight="700">User</text>
+<text x="1254" y="269" font-size="13" fill="#556577">users • same identity, repeated context</text>
+<rect x="1240" y="284" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1252" y="305" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="1323" y="305" font-size="15">_id</text>
+<text x="1618" y="305" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="1240" y="314" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1252" y="335" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="1323" y="335" font-size="15">email</text>
+<text x="1618" y="335" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="1240" y="344" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1252" y="365" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1323" y="365" font-size="15">name</text>
+<text x="1618" y="365" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="1240" y="374" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1252" y="395" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1323" y="395" font-size="15">isActive</text>
+<text x="1618" y="395" font-size="12" text-anchor="end" fill="#556577">bool</text>
+<rect x="1740" y="220" width="390" height="274" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="1740" y="220" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="1754" y="246" font-size="20" font-weight="700">Notification</text>
+<text x="1754" y="269" font-size="13" fill="#556577">collection: notifications</text>
+<rect x="1740" y="284" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="305" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="1823" y="305" font-size="15">_id</text>
+<text x="2118" y="305" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="1740" y="314" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="335" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="1823" y="335" font-size="15">userId</text>
+<text x="2118" y="335" font-size="12" text-anchor="end" fill="#556577">User</text>
+<rect x="1740" y="344" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="365" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="365" font-size="15">type / title / message</text>
+<text x="2118" y="365" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="1740" y="374" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="395" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="395" font-size="15">dedupeKey</text>
+<text x="2118" y="395" font-size="12" text-anchor="end" fill="#556577">not unique</text>
+<rect x="1740" y="404" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="425" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="425" font-size="15">passId / registrationId</text>
+<text x="2118" y="425" font-size="12" text-anchor="end" fill="#556577">Pass / Registration</text>
+<rect x="1740" y="434" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="455" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="455" font-size="15">eventId / teamId</text>
+<text x="2118" y="455" font-size="12" text-anchor="end" fill="#556577">Event / Team</text>
+<rect x="1740" y="464" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="485" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="485" font-size="15">readAt / emailStatus</text>
+<text x="2118" y="485" font-size="12" text-anchor="end" fill="#556577">date? / enum</text>
+<rect x="1740" y="800" width="390" height="364" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="1740" y="800" width="390" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="1754" y="826" font-size="20" font-weight="700">EmailJob</text>
+<text x="1754" y="849" font-size="13" fill="#556577">collection: emailjobs • durable outbox</text>
+<rect x="1740" y="864" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="885" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="1823" y="885" font-size="15">_id</text>
+<text x="2118" y="885" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="1740" y="894" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="915" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="1823" y="915" font-size="15">dedupeKey</text>
+<text x="2118" y="915" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="1740" y="924" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="945" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="945" font-size="15">to / subject / kind</text>
+<text x="2118" y="945" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="1740" y="954" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="975" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="975" font-size="15">notificationId</text>
+<text x="2118" y="975" font-size="12" text-anchor="end" fill="#556577">Notification?</text>
+<rect x="1740" y="984" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1005" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="1005" font-size="15">recipientId</text>
+<text x="2118" y="1005" font-size="12" text-anchor="end" fill="#556577">User?</text>
+<rect x="1740" y="1014" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1035" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="1035" font-size="15">inviteId / passId</text>
+<text x="2118" y="1035" font-size="12" text-anchor="end" fill="#556577">TeamInvite / Pass</text>
+<rect x="1740" y="1044" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1065" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="1065" font-size="15">registrationId</text>
+<text x="2118" y="1065" font-size="12" text-anchor="end" fill="#556577">Registration?</text>
+<rect x="1740" y="1074" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1095" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1823" y="1095" font-size="15">eventId / teamId</text>
+<text x="2118" y="1095" font-size="12" text-anchor="end" fill="#556577">Event / Team</text>
+<rect x="1740" y="1104" width="390" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1125" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="1125" font-size="15">status / availableAt</text>
+<text x="2118" y="1125" font-size="12" text-anchor="end" fill="#556577">enum / date</text>
+<rect x="1740" y="1134" width="390" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1752" y="1155" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1823" y="1155" font-size="15">attempts / leaseUntil</text>
+<text x="2118" y="1155" font-size="12" text-anchor="end" fill="#556577">number / date?</text>
+<path d="M 60,1210 L 2140,1210" fill="none" stroke="#c8d2dd" stroke-width="1.7"/>
+<text x="60" y="1242" font-size="16" font-weight="700" text-anchor="start" fill="#203044">NOTATION</text>
+<path d="M 60,1277 L 132,1277" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 67.0,1269.0 L 67.0,1285.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 75.0,1269.0 L 75.0,1285.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<text x="148" y="1283" font-size="14" font-weight="400" text-anchor="start" fill="#203044">1  Exactly one</text>
+<path d="M 380,1277 L 452,1277" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 387.0,1269.0 L 387.0,1285.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="401.0" cy="1277.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<text x="468" y="1283" font-size="14" font-weight="400" text-anchor="start" fill="#203044">0..1  Zero or one</text>
+<path d="M 700,1277 L 772,1277" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1269.0 L 715.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1277.0 L 715.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1285.0 L 715.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="725.0" cy="1277.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<text x="788" y="1283" font-size="14" font-weight="400" text-anchor="start" fill="#203044">0..*  Zero or many</text>
+<path d="M 1020,1277 L 1092,1277" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1269.0 L 1035.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1277.0 L 1035.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1285.0 L 1035.0,1277.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1045.0,1269.0 L 1045.0,1285.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<text x="1108" y="1283" font-size="14" font-weight="400" text-anchor="start" fill="#203044">1..*  One or many</text>
+<text x="60" y="1321" font-size="14" font-weight="400" text-anchor="start" fill="#203044">PK = document identifier   UQ = unique index   FK = logical ObjectId reference   ? = nullable / optional</text>
+<text x="60" y="1352" font-size="14" font-weight="400" text-anchor="start" fill="#203044">Dashed = non-identifying reference; each document has its own _id. Solid = embedded ownership, not a separate collection.</text>
+<text x="60" y="1388" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Team.members[] and closedRoster[] are embedded values. Team.members.userId is indexed with eventId but is NOT unique or a member primary key.</text>
+<text x="60" y="1417" font-size="14" font-weight="400" text-anchor="start" fill="#556577">An invite may target an unregistered email, so invitedUser is nullable. Pending (teamId, invitedEmail) uniqueness uses a partial index.</text>
+<text x="60" y="1446" font-size="14" font-weight="400" text-anchor="start" fill="#556577">EmailJob may exist without a Notification or registered recipient. Neither optional reference is unique: the physical model allows many jobs.</text>
+<text x="60" y="1475" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Other EmailJob and Notification subject refs are shown in rows; contextual links do not establish required parent relationships.</text>
+<text x="60" y="1504" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Operational collections and polymorphic audit targets are omitted here; see the full relationship catalog.</text>
+</g></svg>

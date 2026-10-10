@@ -39,7 +39,7 @@ try {
 async function start() {
   await connectDatabase();
   await new Promise((resolve) => server.listen(config.port, resolve));
-  console.log(`EventFlow API listening on port ${config.port} (${config.nodeEnv})`);
+  console.log(`Muster API listening on port ${config.port} (${config.nodeEnv})`);
   if (!process.env.MONGODB_URI) console.warn('MONGODB_URI is not configured; database routes will be unavailable');
   return server;
 }

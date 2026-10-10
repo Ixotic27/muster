@@ -8,7 +8,7 @@ function temporaryIdentity(user) {
 async function readAuthentication(req) {
   const header = req.get('authorization') || '';
   const bearer = header.startsWith('Bearer ') ? header.slice(7).trim() : null;
-  const token = bearer || req.cookies?.eventflow_access_token;
+  const token = bearer || req.cookies?.muster_access_token;
 
   if (!token) return { error: 'Authentication required' };
   const decoded = jwt.verify(token, loadConfig().jwtSecret);

@@ -7,7 +7,7 @@ const { fail } = require('../utils/operations');
 async function verifyTicket(req, res) {
   const { token, eventId, scanId } = req.body;
   const payload = verifyToken(token);
-  if (!payload || !isValidObjectId(payload.eventId) || !isValidObjectId(payload.registrationId) || !isValidObjectId(payload.sub)) return res.status(400).json({ success: false, code: 'INVALID_SIGNATURE', message: 'Invalid entry QR. Use the attendee’s EventFlow entry pass.' });
+  if (!payload || !isValidObjectId(payload.eventId) || !isValidObjectId(payload.registrationId) || !isValidObjectId(payload.sub)) return res.status(400).json({ success: false, code: 'INVALID_SIGNATURE', message: 'Invalid entry QR. Use the attendee’s Muster entry pass.' });
   if (!payload.exp || !Number.isFinite(Date.parse(payload.exp)) || isExpired(payload)) return res.status(400).json({ success: false, code: 'EXPIRED', message: 'This entry pass has expired' });
   if (String(eventId) !== String(payload.eventId)) return res.status(400).json({ success: false, code: 'WRONG_EVENT', message: 'This pass belongs to a different event. Select the matching checkpoint.' });
   if (typeof payload.passId !== 'string' || !/^PASS-[A-Z0-9-]{4,80}$/.test(payload.passId)) return res.status(400).json({ success: false, code: 'INVALID_PASS', message: 'Malformed entry pass' });

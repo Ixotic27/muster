@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'success',
-    message: 'EventFlow Backend API is healthy',
+    message: 'Muster Backend API is healthy',
     timestamp: new Date().toISOString()
   });
 });
@@ -45,7 +45,7 @@ app.get('/api/health', (req, res) => {
 // Root API Endpoint
 app.get('/api', (req, res) => {
   res.status(200).json({
-    name: 'EventFlow Fest API',
+    name: 'Muster API',
     version: '1.0.0',
     documentation: '/docs/api'
   });

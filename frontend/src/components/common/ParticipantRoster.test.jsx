@@ -33,7 +33,7 @@ test('filter changes reset paging and downloads include the same event/search/fi
   await act(async () => container.querySelectorAll('.participant-counts button')[3].click());
   expect(api.mock.calls.at(-1)[0]).toBe('/admin/roster?filter=attended&q=Team+Alpha&eventId=event&page=1');
   await act(async () => [...container.querySelectorAll('button')].find(button => button.textContent.includes('Download filtered')).click());
-  expect(downloadRoster).toHaveBeenCalledWith('/admin/roster/export?filter=attended&q=Team+Alpha&eventId=event', 'eventflow-event-attended.csv');
+  expect(downloadRoster).toHaveBeenCalledWith('/admin/roster/export?filter=attended&q=Team+Alpha&eventId=event', 'muster-event-attended.csv');
 });
 
 test('failed download stays visible and can be retried', async () => {

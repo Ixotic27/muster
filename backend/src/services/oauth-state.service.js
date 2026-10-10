@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const { loadConfig } = require('../config/env');
-const COOKIE = 'eventflow_oauth_state';
+const COOKIE = 'muster_oauth_state';
 const options = () => ({ httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', path: '/api/v1/auth/google' });
 
 function beginOAuth(res) {

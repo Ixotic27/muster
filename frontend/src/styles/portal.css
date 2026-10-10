@@ -264,3 +264,5 @@ dialog.review-dialog::backdrop { background: #191025b5; }
   .portal .scan-result .summary-list > div { grid-template-columns: 70px minmax(0, 1fr); }
   .portal .pass-body { padding: 20px 18px; }
 }
+
+.demo-label { font-size: 10px; line-height: 1; letter-spacing: .08em; padding: 5px 7px; margin-left: 5px; border: 1px solid #c7d2fe; border-radius: 4px; color: #173bc7; background: #eef2ff; }

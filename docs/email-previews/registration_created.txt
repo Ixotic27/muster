@@ -1,4 +1,4 @@
-EventFlow
+Muster
 
 Your event registration is recorded
 

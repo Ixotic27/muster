@@ -1,6 +1,6 @@
 const crypto=require('crypto');
 const EmailJob=require('../models/EmailJob');
-const brand=()=>process.env.BRAND_NAME||'EventFlow';
+const brand=()=>process.env.BRAND_NAME||'Muster';
 function absoluteLink(path='/dashboard'){
  const origin=process.env.FRONTEND_URL||process.env.APP_URL||(process.env.NODE_ENV!=='production'?'http://localhost:3000':'');
  if(!origin)throw new Error('FRONTEND_URL is required for production email');

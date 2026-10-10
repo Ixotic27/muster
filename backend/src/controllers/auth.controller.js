@@ -12,7 +12,7 @@ function issueAccessToken(user) {
 }
 
 function setAuthCookie(res, token, maxAge = loadConfig().jwtCookieMaxAgeMs) {
-  res.cookie('eventflow_access_token', token, {
+  res.cookie('muster_access_token', token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
@@ -36,7 +36,7 @@ async function getMe(req, res) {
 async function devLogin(req, res) {
   if (process.env.NODE_ENV === 'production' || process.env.ENABLE_DEV_LOGIN !== 'true') return res.status(404).json({ success: false, message: 'Not found' });
   const email = normalizeEmail(req.body.email);
-  const name = String(req.body.name || email.split('@')[0] || 'EventFlow User').trim().slice(0, 120);
+  const name = String(req.body.name || email.split('@')[0] || 'Muster User').trim().slice(0, 120);
   if (!email || !email.includes('@')) return res.status(400).json({ success: false, message: 'A valid email is required' });
   const config = loadConfig();
   const existing = await User.findOne({ email }).select('mustChangePassword').lean();
@@ -110,7 +110,7 @@ async function login(req, res) {
 }
 
 async function forgotPassword(req, res) {
-  if (!require('../config/email').getEmailTransporter()) return res.status(503).json({ success: false, message: 'Email recovery is not configured yet. Contact the EventFlow organizers for account recovery.' });
+  if (!require('../config/email').getEmailTransporter()) return res.status(503).json({ success: false, message: 'Email recovery is not configured yet. Contact the Muster organizers for account recovery.' });
   const email = normalizeEmail(req.body.email);
   if (!email || !email.includes('@')) return res.status(400).json({ success: false, message: 'A valid email is required' });
   const user = await User.findOne({ email, isActive: true }).select('+passwordResetTokenHash');
@@ -123,7 +123,7 @@ async function forgotPassword(req, res) {
   await user.save({ validateBeforeSave: false });
   const resetLink = '/reset-password#token=' + token;
   const dedupeKey = 'reset:' + user.passwordResetTokenHash;
-  await sendEmail({ dedupeKey, to: email, recipientId: user._id, subject: 'Reset your EventFlow password', text: 'Use the button below within 30 minutes to reset your password. If you did not request this, ignore this email.', link: resetLink, kind: 'password_reset', priority: 200, expiresAt: user.passwordResetExpiresAt });
+  await sendEmail({ dedupeKey, to: email, recipientId: user._id, subject: 'Reset your Muster password', text: 'Use the button below within 30 minutes to reset your password. If you did not request this, ignore this email.', link: resetLink, kind: 'password_reset', priority: 200, expiresAt: user.passwordResetExpiresAt });
   if (process.env.NODE_ENV === 'production') await require('../services/email-dispatch.service').dispatchResetEmail(dedupeKey);
   if (process.env.NODE_ENV !== 'production') response.debugToken = token;
   return res.json(response);
@@ -153,7 +153,7 @@ async function resetPassword(req, res) {
 }
 
 function logout(req, res) {
-  res.clearCookie('eventflow_access_token', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax' });
+  res.clearCookie('muster_access_token', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax' });
   return res.json({ success: true, message: 'Logged out' });
 }
 
@@ -179,7 +179,7 @@ async function updateProfile(req, res) {
 
 function googleCallback(req, res) {
   if (req.user.mustChangePassword) {
-    res.clearCookie('eventflow_access_token', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax' });
+    res.clearCookie('muster_access_token', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax' });
     return res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}/auth?mode=login&error=staff_password_required`);
   }
   const token = issueAccessToken(req.user);

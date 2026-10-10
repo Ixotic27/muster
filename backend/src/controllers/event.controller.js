@@ -35,7 +35,7 @@ async function getPaymentIntent(req, res) {
   if (!Number.isFinite(amount) || amount < 0) return res.status(400).json({ success: false, message: 'Invalid payment amount' });
   const pa = event.paymentUpiId || process.env.PAYMENT_UPI_ID;
   if (!pa) return res.status(503).json({ success: false, message: 'Payment UPI is not configured' });
-  const params = new URLSearchParams({ pa, pn: process.env.PAYMENT_UPI_NAME || 'EventFlow', am: amount.toFixed(2), cu: 'INR', tn: String(req.query.note || `EventFlow-${event.slug}`).slice(0, 80) });
+  const params = new URLSearchParams({ pa, pn: process.env.PAYMENT_UPI_NAME || 'Muster', am: amount.toFixed(2), cu: 'INR', tn: String(req.query.note || `Muster-${event.slug}`).slice(0, 80) });
   return res.json({ success: true, eventId: event._id, amountInr: amount, upiId: pa, intentUrl: `upi://pay?${params.toString()}`, qrUrl: event.paymentQrUrl || null });
 }
 

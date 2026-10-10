@@ -4,7 +4,7 @@ async function getPublicConfig(req, res) {
   const entries = await AppConfig.find({ isPublic: true }).select('key value -_id').lean();
   const config = entries.reduce((result, entry) => { result[entry.key] = entry.value; return result; }, {});
   config.password_reset_available = Boolean(require('../config/email').getEmailTransporter());
-  config.brand_name = process.env.BRAND_NAME || 'EventFlow';
+  config.brand_name = process.env.BRAND_NAME || 'Muster';
   config.manual_payments_available = process.env.ENABLE_MANUAL_PAYMENTS === 'true' && Boolean(process.env.PAYMENT_UPI_ID);
   config.payment_test_mode = process.env.PAYMENT_TEST_MODE !== 'false';
   if (config.payment_upi_id === undefined && process.env.PAYMENT_UPI_ID) config.payment_upi_id = process.env.PAYMENT_UPI_ID;

@@ -2,10 +2,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 process.env.FRONTEND_URL = 'https://events.example.com';
-process.env.BRAND_NAME = 'EventFlow';
+process.env.BRAND_NAME = 'Muster';
 const { renderEmail } = require('../backend/src/services/email.service');
 const samples = [
-  ['account_created', 'Welcome to EventFlow', 'Your participant account is ready.\n\nBrowse events, join a team or manage your registrations from your dashboard.'],
+  ['account_created', 'Welcome to Muster', 'Your participant account is ready.\n\nBrowse events, join a team or manage your registrations from your dashboard.'],
   ['registration_created', 'Your event registration is recorded', 'Your registration for Community Workshop has been created.\n\nCheck your dashboard for its current status and any remaining requirements.'],
   ['payment_verified', 'Your payment has been verified', 'Payment for your Design Sprint registration has been verified successfully.\n\nYou can review the payment receipt and your registration status in your account.'],
   ['refund_requested', 'Your refund request has been received', 'The organizers have received your withdrawal and refund request.\n\nThey will review the request according to the event refund policy and update your account.'],

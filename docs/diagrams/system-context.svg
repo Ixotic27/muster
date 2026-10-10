@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1710" height="1040" viewBox="0 0 1710 1040" role="img" aria-labelledby="title desc">
+<title id="title">Muster | System context (C4 · Level 1)</title><desc id="desc">Reusable event-management backend. Participants and staff access it through the reference frontend or an adopter-built client.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#25547c"/></marker>
+<marker id="blue-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#25547c"/></marker>
+<marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6570"/></marker>
+<marker id="grey-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#5c6570"/></marker>
+<marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e706a"/></marker>
+<marker id="teal-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#1e706a"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="60" y="63.52" font-size="28" font-weight="700" text-anchor="start" fill="#526174">Muster | System context (C4 · Level 1)</text>
+<text x="60" y="105.94" font-size="16" font-weight="400" text-anchor="start" fill="#526174">Reusable event-management backend. Participants and staff access it through the reference frontend or an adopter-built client.</text>
+<circle cx="140.0" cy="237" r="16" fill="white" stroke="#142438" stroke-width="2"/>
+<path d="M 140.0,253 L 140.0,290 M 113.0,266 L 167.0,266 M 140.0,290 L 116.0,319 M 140.0,290 L 164.0,319" fill="none" stroke="#142438" stroke-width="2"/>
+<text x="140.0" y="344.78" font-size="17" font-weight="700" text-anchor="middle" fill="#142438">Participant</text>
+<text x="140.0" y="370.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">[Person]</text>
+<text x="140.0" y="402.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Creates or joins a team</text>
+<text x="140.0" y="426.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Registers, pays, uses pass</text>
+<circle cx="140.0" cy="617" r="16" fill="white" stroke="#142438" stroke-width="2"/>
+<path d="M 140.0,633 L 140.0,670 M 113.0,646 L 167.0,646 M 140.0,670 L 116.0,699 M 140.0,670 L 164.0,699" fill="none" stroke="#142438" stroke-width="2"/>
+<text x="140.0" y="724.78" font-size="17" font-weight="700" text-anchor="middle" fill="#142438">Event staff</text>
+<text x="140.0" y="750.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">[Person]</text>
+<text x="140.0" y="782.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Manager / scanner / admin</text>
+<text x="140.0" y="806.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Reviews, monitors, checks in</text>
+<rect x="450" y="360" width="540" height="290" fill="#f1f6f8" stroke="#25547c" stroke-width="2"/>
+<text x="720.0" y="397" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Muster backend</text>
+<text x="720.0" y="423" text-anchor="middle" font-size="14" fill="#526174">[Software system]</text>
+<text x="720.0" y="463" text-anchor="middle" font-size="15" fill="#142438">Accounts, events and team coordination</text>
+<text x="720.0" y="490" text-anchor="middle" font-size="15" fill="#142438">Registration and payment verification</text>
+<text x="720.0" y="517" text-anchor="middle" font-size="15" fill="#142438">Individual attendance passes and check-in</text>
+<text x="720.0" y="544" text-anchor="middle" font-size="15" fill="#142438">Staff APIs, exports and workflow email</text>
+<rect x="1250" y="150" width="380" height="195" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="1440.0" y="187" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Razorpay</text>
+<text x="1440.0" y="213" text-anchor="middle" font-size="14" fill="#526174">[External software system]</text>
+<text x="1440.0" y="253" text-anchor="middle" font-size="15" fill="#142438">Hosted checkout and payment API</text>
+<text x="1440.0" y="280" text-anchor="middle" font-size="15" fill="#142438">Captured-payment status + signed events</text>
+<rect x="1250" y="440" width="380" height="195" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="1440.0" y="477" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Google Identity</text>
+<text x="1440.0" y="503" text-anchor="middle" font-size="14" fill="#526174">[External system · optional]</text>
+<text x="1440.0" y="543" text-anchor="middle" font-size="15" fill="#142438">Verified-email OAuth identity</text>
+<text x="1440.0" y="570" text-anchor="middle" font-size="15" fill="#142438">Password login remains available</text>
+<rect x="1250" y="730" width="380" height="195" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="1440.0" y="767" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">SMTP provider</text>
+<text x="1440.0" y="793" text-anchor="middle" font-size="14" fill="#526174">[External software system]</text>
+<text x="1440.0" y="833" text-anchor="middle" font-size="15" fill="#142438">Accepts transactional messages</text>
+<text x="1440.0" y="860" text-anchor="middle" font-size="15" fill="#142438">Delivery / inbox placement is external</text>
+<path d="M 240,325 L 330,325 L 330,425 L 450,425" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="240" y="270" width="205" height="25" fill="white"/>
+<text x="342.5" y="287.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Uses a client application</text>
+<path d="M 240,705 L 330,705 L 330,580 L 450,580" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="240" y="725" width="210" height="25" fill="white"/>
+<text x="345.0" y="742.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Uses role-scoped client</text>
+<path d="M 990,415 L 1100,415 L 1100,240 L 1250,240" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="990" y="155" width="260" height="25" fill="white"/>
+<text x="1120.0" y="172.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Creates / verifies payments · HTTPS</text>
+<path d="M 1250,295 L 1160,295 L 1160,470 L 990,470" fill="none" stroke="#5c6570" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#grey)"/>
+<rect x="995" y="455" width="250" height="25" fill="white"/>
+<text x="1120.0" y="472.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">Signed payment webhook</text>
+<path d="M 990,530 L 1250,530" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="990" y="495" width="255" height="25" fill="white"/>
+<text x="1117.5" y="512.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">OAuth 2.0 · HTTPS</text>
+<path d="M 990,595 L 1100,595 L 1100,825 L 1250,825" fill="none" stroke="#5c6570" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#grey)"/>
+<rect x="990" y="860" width="275" height="25" fill="white"/>
+<text x="1127.5" y="877.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">Workflow notifications · SMTP/TLS</text>
+<text x="60" y="984.76" font-size="14" font-weight="400" text-anchor="start" fill="#526174">Solid arrow: request / interaction     Dashed arrow: webhook or email delivery     Arrow direction: initiator → recipient</text>
+</g></svg>

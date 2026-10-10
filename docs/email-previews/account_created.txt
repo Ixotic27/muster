@@ -1,6 +1,6 @@
-EventFlow
+Muster
 
-Welcome to EventFlow
+Welcome to Muster
 
 Why you received this email: You signed up for an event account.
 

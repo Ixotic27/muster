@@ -16,13 +16,13 @@ export default function InvitationPage() {
     } = useAuth();
   const hashToken = new URLSearchParams(location.hash.slice(1)).get('token') || '';
   const queryToken = new URLSearchParams(location.search).get('token') || '';
-  const token = hashToken || queryToken || (typeof window !== 'undefined' ? sessionStorage.getItem('eventflow-invite-token-' + id) || '' : '');
+  const token = hashToken || queryToken || (typeof window !== 'undefined' ? sessionStorage.getItem('muster-invite-token-' + id) || '' : '');
   const [invite, setInvite] = useState(null),
     [error, setError] = useState(''),
     [result, setResult] = useState(''),
     [busy, setBusy] = useState(false);
   useEffect(() => {
-    if (hashToken || queryToken) sessionStorage.setItem('eventflow-invite-token-' + id, hashToken || queryToken);
+    if (hashToken || queryToken) sessionStorage.setItem('muster-invite-token-' + id, hashToken || queryToken);
     if (loading || !user) return undefined;
     let active = true;
     api('/teams/invites/' + id + '/preview', {
@@ -50,7 +50,7 @@ export default function InvitationPage() {
         }
       });
       setResult(data.message);
-      sessionStorage.removeItem('eventflow-invite-token-' + id);
+      sessionStorage.removeItem('muster-invite-token-' + id);
     } catch (e) {
       setError(e.message);
     } finally {

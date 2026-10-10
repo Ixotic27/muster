@@ -1,5 +1,8 @@
 # Release verification — 10 October 2026
 
+See [Muster release verification](muster-release.md) for the API-first rename,
+updated architecture and latest desktop/mobile checks.
+
 The template was checked in its own folder using synthetic accounts, disposable
 MongoDB replica sets and fake email/payment providers. The original event's
 database, deployment, photos and participant records were not used.
@@ -25,7 +28,7 @@ standalone directory with npm 10: Linux-targeted clean-install validation and
 an actual Windows clean install passed, followed by all 85 client tests, the
 production build and a zero-finding full audit. No application code or existing
 dependency versions changed in this portability correction. Latest hosted
-results are available in [GitHub Actions](https://github.com/Ixotic27/event-management-template/actions/workflows/ci.yml).
+results are available in [GitHub Actions](https://github.com/Ixotic27/muster/actions/workflows/ci.yml).
 
 ## Browser checks
 

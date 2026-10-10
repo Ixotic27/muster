@@ -1,5 +1,5 @@
 const BASE = process.env.REACT_APP_API_URL || '/api/v1';
-export async function downloadRoster(path, filename = 'eventflow-participants.csv') {
+export async function downloadRoster(path, filename = 'muster-participants.csv') {
   let response;
   try {
     response = await fetch(BASE + path, {

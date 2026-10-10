@@ -108,7 +108,7 @@ afterEach(async () => {
 test('rejects payment QR and website text without checking anyone in', async () => {
   await submitToken('upi://pay?pa=example@upi');
   expect(api).not.toHaveBeenCalled();
-  expect(container.textContent).toContain('This is not an EventFlow entry pass');
+  expect(container.textContent).toContain('This is not an Muster entry pass');
 });
 test('manual entry submits the selected event and shows confirmed identity', async () => {
   api.mockResolvedValue({
@@ -316,5 +316,5 @@ test('payment QR decoded during image retry still never reaches entry verificati
   });
   expect(reader.scanFile).toHaveBeenCalledTimes(2);
   expect(api).not.toHaveBeenCalled();
-  expect(container.textContent).toContain('This is not an EventFlow entry pass');
+  expect(container.textContent).toContain('This is not an Muster entry pass');
 });

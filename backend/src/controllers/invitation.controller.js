@@ -46,7 +46,7 @@ async function inviteMember(req, res) {
         invitedUser: target?._id, invitedEmail, tokenHash: hash(token), requiresToken: true, expiresAt }], { session });
     }
     await sendEmail({ dedupeKey: 'invite:' + invite._id + ':' + invite.tokenHash, to: invitedEmail, kind: 'team_invite', inviteId: invite._id,
-      subject: 'You’re invited to join ' + team.teamName + ' · ' + (process.env.BRAND_NAME || 'EventFlow'),
+      subject: 'You’re invited to join ' + team.teamName + ' · ' + (process.env.BRAND_NAME || 'Muster'),
       text: req.user.name + ' invited you to join “' + team.teamName + '” for ' + event.name + '.\n\nCreate an account, or sign in using this email address, then accept or decline the invitation. ' + 'Joining a team does not complete event registration or payment.' + '\n\nThis invitation expires at ' + require('../services/email.service').formatDate(expiresAt) + '. If you were not expecting it, you can ignore this email.',
       link: '/invitations/' + invite._id + '#token=' + token, expiresAt, priority: 10 }, { session });
     if (target) await createNotification({ userId: target._id, type: 'team_invite', title: 'Invitation to ' + team.teamName,

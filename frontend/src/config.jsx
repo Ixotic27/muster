@@ -1,5 +1,5 @@
 export const site = {
-  name: process.env.REACT_APP_SITE_NAME || 'EventFlow',
+  name: process.env.REACT_APP_SITE_NAME || 'Muster',
   tagline: process.env.REACT_APP_SITE_TAGLINE || 'Good events start with a clear plan.',
   supportEmail: process.env.REACT_APP_SUPPORT_EMAIL || '',
   currency: 'INR',

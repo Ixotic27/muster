@@ -18,7 +18,7 @@ async function paymentIntent(req, res) {
   if (!canCollectPayment(registration.eventId, registration)) throw fail(409, 'Payment collection is unavailable or its deadline has passed');
   const upiId = registration.eventId.paymentUpiId || process.env.PAYMENT_UPI_ID;
   if (!upiId) return res.status(503).json({ success: false, message: 'Payment collection is not configured yet.' });
-  const params = new URLSearchParams({ pa: upiId, pn: process.env.PAYMENT_UPI_NAME || 'EventFlow', am: registration.feeSnapshotInr.toFixed(2), cu: 'INR', tn: registration.regId });
+  const params = new URLSearchParams({ pa: upiId, pn: process.env.PAYMENT_UPI_NAME || 'Muster', am: registration.feeSnapshotInr.toFixed(2), cu: 'INR', tn: registration.regId });
   const intentUrl = `upi://pay?${params}`;
   return res.json({ success: true, amountInr: registration.feeSnapshotInr, upiId, intentUrl, testMode: process.env.PAYMENT_TEST_MODE !== 'false', qrDataUrl: await QRCode.toDataURL(intentUrl, { width: 400, margin: 3, errorCorrectionLevel: 'M' }) });
 }

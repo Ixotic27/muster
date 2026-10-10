@@ -25,7 +25,7 @@ export default function Navbar() {
   return <header className={`topbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="brand-mark">
         <Link className="brand-link" to="/" onClick={closeMenu} aria-label={site.name + " home"}>
-          <span className="brand-arrow" aria-hidden="true">↗</span>{site.name}
+          <span className="brand-arrow" aria-hidden="true">↗</span>{site.name}<span className="demo-label">DEMO</span>
         </Link>
       </div>
       <button className="nav-toggle" type="button" aria-expanded={isMenuOpen} aria-controls="main-navigation" aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => setIsMenuOpen(open => !open)}>

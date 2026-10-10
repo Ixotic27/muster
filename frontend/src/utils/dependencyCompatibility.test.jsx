@@ -7,7 +7,7 @@ const { loadNycConfig } = require('@istanbuljs/load-nyc-config');
 // The test tool's YAML reader is overridden to a patched version. Exercise its
 // actual public entry point, including extends/array handling, before publishing.
 test('patched coverage YAML dependency remains compatible with the Jest loader', async () => {
-  const folder = fs.mkdtempSync(path.join(os.tmpdir(), 'eventflow-yaml-'));
+  const folder = fs.mkdtempSync(path.join(os.tmpdir(), 'muster-yaml-'));
   const packageFile = path.join(folder, 'package.json');
   const configFile = path.join(folder, '.nycrc.yaml');
   const baseFile = path.join(folder, 'coverage-base.json');

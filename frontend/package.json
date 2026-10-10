@@ -1,7 +1,7 @@
 {
-  "name": "eventflow-frontend",
+  "name": "muster-demo",
   "version": "1.0.0",
-  "description": "Reusable event registration and operations client",
+  "description": "Reference web client for checking and demonstrating the Muster API",
   "private": true,
   "scripts": {
     "start": "vite --host 127.0.0.1 --port 4120",

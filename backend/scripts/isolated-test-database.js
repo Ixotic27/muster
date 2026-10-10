@@ -14,7 +14,7 @@ Object.assign(process.env, {
 async function startDatabase() {
   const { MongoMemoryReplSet } = require('mongodb-memory-server');
   const replica = await MongoMemoryReplSet.create({ replSet: { count: 1, ip: '127.0.0.1', storageEngine: 'wiredTiger' }, binary: { version: '7.0.24' } });
-  process.env.MONGODB_URI = replica.getUri('eventflow_isolated_tests');
+  process.env.MONGODB_URI = replica.getUri('muster_isolated_tests');
   if (!process.env.MONGODB_URI.startsWith('mongodb://127.0.0.1:')) throw new Error('Refusing non-loopback test database');
   try {
     const { connectDatabase } = require('../src/config/database');

@@ -1,143 +1,358 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1410" viewBox="0 0 1760 1410" role="img" aria-labelledby="title desc">
-<title id="title">EventFlow · Entity relationship diagram</title><desc id="desc">MongoDB logical model • refs are application-enforced; embedded team members are not a separate collection.</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8293ad"/></marker></defs>
-<rect width="1760" height="1410" fill="#f4f7fb"/>
-<g font-family="Arial, sans-serif">
-<text x="60" y="65" font-size="32" font-weight="700" fill="#14233b">EventFlow · Entity relationship diagram</text>
-<text x="60" y="106" font-size="17" fill="#52627a">MongoDB logical model • refs are application-enforced; embedded team members are not a separate collection.</text>
-<path d="M 380,290.0 L 500,290.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="405.0" y="264.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="440.0" y="281.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
-<path d="M 820,290.0 L 940,290.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="845.0" y="264.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="281.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
-<path d="M 120,410 L 120,580" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
-<rect x="135.75" y="479" width="142.5" height="24" rx="5" fill="#f4f7fb"/><text x="207" y="496" text-anchor="middle" font-size="13" fill="#52627a">many ↔ many · staff</text>
-<path d="M 660,410 L 660,580" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="678.5" y="479" width="135.0" height="24" rx="5" fill="#f4f7fb"/><text x="746" y="496" text-anchor="middle" font-size="13" fill="#52627a">1 → 0..1 per event</text>
-<path d="M 380,700.0 L 500,700.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="405.0" y="674.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="440.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
-<path d="M 820,700.0 L 940,700.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="845.0" y="674.0" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
-<path d="M 1260,700.0 L 1380,700.0" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
-<rect x="1282.5" y="674.0" width="75.0" height="24" rx="5" fill="#f4f7fb"/><text x="1320.0" y="691.0" text-anchor="middle" font-size="13" fill="#52627a">0..1 order</text>
-<path d="M 135,820 L 135,990" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="160.0" y="891" width="70" height="24" rx="5" fill="#f4f7fb"/><text x="195" y="908" text-anchor="middle" font-size="13" fill="#52627a">1 → many</text>
-<path d="M 500,790 L 420,790 L 420,1060 L 380,1060" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="358.25" y="924" width="187.5" height="24" rx="5" fill="#f4f7fb"/><text x="452" y="941" text-anchor="middle" font-size="13" fill="#52627a">1 → many · one per member</text>
-<path d="M 660,820 L 660,990" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="673.0" y="891" width="150.0" height="24" rx="5" fill="#f4f7fb"/><text x="748" y="908" text-anchor="middle" font-size="13" fill="#52627a">1 → many · lifecycle</text>
-<path d="M 820,1110.0 L 940,1110.0" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="831.25" y="1084.0" width="97.5" height="24" rx="5" fill="#f4f7fb"/><text x="880.0" y="1101.0" text-anchor="middle" font-size="13" fill="#52627a">0..1 mail job</text>
-<path d="M 210,170 L 210,144 L 1540,144 L 1540,170" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
-<rect x="821.25" y="125" width="97.5" height="24" rx="5" fill="#f4f7fb"/><text x="870" y="142" text-anchor="middle" font-size="13" fill="#52627a">staff actions</text>
-<rect x="60" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="62" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
-<rect x="62" y="199" width="316" height="22" fill="#2855d9"/>
-<text x="80" y="203" font-size="19" font-weight="700" fill="white">User</text>
-<text x="80" y="250" font-size="15" fill="#14233b">_id · PK</text>
-<text x="80" y="277" font-size="15" fill="#14233b">email · unique</text>
-<text x="80" y="304" font-size="15" fill="#14233b">name / optional profile</text>
-<text x="80" y="331" font-size="15" fill="#14233b">role / assignedEvents[]</text>
-<text x="80" y="358" font-size="15" fill="#14233b">passwordHash · hidden</text>
-<rect x="500" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="502" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
-<rect x="502" y="199" width="316" height="22" fill="#2855d9"/>
-<text x="520" y="203" font-size="19" font-weight="700" fill="white">Team</text>
-<text x="520" y="250" font-size="15" fill="#14233b">_id · PK</text>
-<text x="520" y="277" font-size="15" fill="#14233b">eventId / leaderId · refs</text>
-<text x="520" y="304" font-size="15" fill="#14233b">joinCode · unique</text>
-<text x="520" y="331" font-size="15" fill="#14233b">members[] · embedded</text>
-<text x="520" y="358" font-size="15" fill="#14233b">status / closedRoster[]</text>
-<rect x="940" y="170" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="942" y="172" width="316" height="49" rx="10" fill="#2855d9"/>
-<rect x="942" y="199" width="316" height="22" fill="#2855d9"/>
-<text x="960" y="203" font-size="19" font-weight="700" fill="white">TeamInvite</text>
-<text x="960" y="250" font-size="15" fill="#14233b">_id · PK</text>
-<text x="960" y="277" font-size="15" fill="#14233b">teamId / eventId · refs</text>
-<text x="960" y="304" font-size="15" fill="#14233b">invitedBy / invitedUser</text>
-<text x="960" y="331" font-size="15" fill="#14233b">invitedEmail / tokenHash</text>
-<text x="960" y="358" font-size="15" fill="#14233b">status / expiresAt</text>
-<rect x="1380" y="170" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
-<rect x="1382" y="172" width="316" height="49" rx="10" fill="#7951b0"/>
-<rect x="1382" y="199" width="316" height="22" fill="#7951b0"/>
-<text x="1400" y="203" font-size="19" font-weight="700" fill="white">AdminAction</text>
-<text x="1400" y="250" font-size="15" fill="#14233b">_id · PK</text>
-<text x="1400" y="277" font-size="15" fill="#14233b">actorId · User ref</text>
-<text x="1400" y="304" font-size="15" fill="#14233b">targetType / targetId</text>
-<text x="1400" y="331" font-size="15" fill="#14233b">action / details</text>
-<text x="1400" y="358" font-size="15" fill="#14233b">createdAt / requestId</text>
-<rect x="60" y="580" width="320" height="240" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="62" y="582" width="316" height="49" rx="10" fill="#2855d9"/>
-<rect x="62" y="609" width="316" height="22" fill="#2855d9"/>
-<text x="80" y="613" font-size="19" font-weight="700" fill="white">Event</text>
-<text x="80" y="660" font-size="15" fill="#14233b">_id · PK / slug · unique</text>
-<text x="80" y="687" font-size="15" fill="#14233b">name / date / venue</text>
-<text x="80" y="714" font-size="15" fill="#14233b">participation / team bounds</text>
-<text x="80" y="741" font-size="15" fill="#14233b">feeInr / capacity / deadline</text>
-<text x="80" y="768" font-size="15" fill="#14233b">status: draft → published</text>
-<rect x="500" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="502" y="582" width="316" height="49" rx="10" fill="#087f78"/>
-<rect x="502" y="609" width="316" height="22" fill="#087f78"/>
-<text x="520" y="613" font-size="19" font-weight="700" fill="white">Registration</text>
-<text x="520" y="660" font-size="15" fill="#14233b">_id · PK / regId · unique</text>
-<text x="520" y="687" font-size="15" fill="#14233b">eventId / leaderId / teamId</text>
-<text x="520" y="714" font-size="15" fill="#14233b">feeSnapshotInr / paymentId</text>
-<text x="520" y="741" font-size="15" fill="#14233b">status / document approval</text>
-<text x="520" y="768" font-size="15" fill="#14233b">refund review fields</text>
-<rect x="940" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="942" y="582" width="316" height="49" rx="10" fill="#087f78"/>
-<rect x="942" y="609" width="316" height="22" fill="#087f78"/>
-<text x="960" y="613" font-size="19" font-weight="700" fill="white">Payment</text>
-<text x="960" y="660" font-size="15" fill="#14233b">_id · PK</text>
-<text x="960" y="687" font-size="15" fill="#14233b">registrationId / payerId</text>
-<text x="960" y="714" font-size="15" fill="#14233b">amountInr / currency</text>
-<text x="960" y="741" font-size="15" fill="#14233b">reference / provider</text>
-<text x="960" y="768" font-size="15" fill="#14233b">status / reviewedAt</text>
-<rect x="1380" y="580" width="320" height="240" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="1382" y="582" width="316" height="49" rx="10" fill="#087f78"/>
-<rect x="1382" y="609" width="316" height="22" fill="#087f78"/>
-<text x="1400" y="613" font-size="19" font-weight="700" fill="white">GatewayOrder</text>
-<text x="1400" y="660" font-size="15" fill="#14233b">_id · PK</text>
-<text x="1400" y="687" font-size="15" fill="#14233b">registrationId / payerId</text>
-<text x="1400" y="714" font-size="15" fill="#14233b">providerOrderId · unique</text>
-<text x="1400" y="741" font-size="15" fill="#14233b">amountPaise / currency</text>
-<text x="1400" y="768" font-size="15" fill="#14233b">provider payment / status</text>
-<rect x="60" y="990" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
-<rect x="62" y="992" width="316" height="49" rx="10" fill="#7951b0"/>
-<rect x="62" y="1019" width="316" height="22" fill="#7951b0"/>
-<text x="80" y="1023" font-size="19" font-weight="700" fill="white">Pass</text>
-<text x="80" y="1070" font-size="15" fill="#14233b">_id · PK / passId · unique</text>
-<text x="80" y="1097" font-size="15" fill="#14233b">registrationId / userId</text>
-<text x="80" y="1124" font-size="15" fill="#14233b">eventId / signed token</text>
-<text x="80" y="1151" font-size="15" fill="#14233b">status / expiresAt</text>
-<text x="80" y="1178" font-size="15" fill="#14233b">checkInStatus / scannedBy</text>
-<rect x="500" y="990" width="320" height="240" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
-<rect x="502" y="992" width="316" height="49" rx="10" fill="#a6640c"/>
-<rect x="502" y="1019" width="316" height="22" fill="#a6640c"/>
-<text x="520" y="1023" font-size="19" font-weight="700" fill="white">Notification</text>
-<text x="520" y="1070" font-size="15" fill="#14233b">_id · PK / userId · ref</text>
-<text x="520" y="1097" font-size="15" fill="#14233b">type / title / message</text>
-<text x="520" y="1124" font-size="15" fill="#14233b">registration/event/pass refs</text>
-<text x="520" y="1151" font-size="15" fill="#14233b">readAt / emailStatus</text>
-<text x="520" y="1178" font-size="15" fill="#14233b">dedupeKey</text>
-<rect x="940" y="990" width="320" height="240" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
-<rect x="942" y="992" width="316" height="49" rx="10" fill="#a6640c"/>
-<rect x="942" y="1019" width="316" height="22" fill="#a6640c"/>
-<text x="960" y="1023" font-size="19" font-weight="700" fill="white">EmailJob</text>
-<text x="960" y="1070" font-size="15" fill="#14233b">_id · PK / dedupeKey · unique</text>
-<text x="960" y="1097" font-size="15" fill="#14233b">recipient / notification refs</text>
-<text x="960" y="1124" font-size="15" fill="#14233b">kind / rendered content</text>
-<text x="960" y="1151" font-size="15" fill="#14233b">status / availableAt</text>
-<text x="960" y="1178" font-size="15" fill="#14233b">attempts / lease / sentAt</text>
-<rect x="1380" y="990" width="320" height="240" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
-<rect x="1382" y="992" width="316" height="49" rx="10" fill="#7951b0"/>
-<rect x="1382" y="1019" width="316" height="22" fill="#7951b0"/>
-<text x="1400" y="1023" font-size="19" font-weight="700" fill="white">Supporting collections</text>
-<text x="1400" y="1070" font-size="15" fill="#14233b">StoredFile · private uploads</text>
-<text x="1400" y="1097" font-size="15" fill="#14233b">AppConfig · event settings</text>
-<text x="1400" y="1124" font-size="15" fill="#14233b">EmailSender · daily budgets</text>
-<text x="1400" y="1151" font-size="15" fill="#14233b">WorkerLease · job exclusion</text>
-<text x="1400" y="1178" font-size="15" fill="#14233b">No live data in repository</text>
-<text x="60" y="1294" font-size="15" fill="#52627a">PK = primary identifier. Arrow labels describe logical cardinality; this diagram highlights the main workflow references.</text>
-<text x="60" y="1334" font-size="15" fill="#52627a">Each accepted teammate receives a separate pass. Scan state belongs to that pass; payment belongs to the registration.</text>
-<text x="60" y="1374" font-size="15" fill="#52627a">Refunds are review fields on Registration. Capacity and roster snapshots preserve historical decisions.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="1790" viewBox="0 0 1750 1790" role="img" aria-labelledby="title description">
+<title id="title">Muster | Core entity–relationship model</title>
+<desc id="description">Physical MongoDB collections • logical relationships and database uniqueness • focused registration and payment view Conventional crow’s-foot cardinalities, square entity tables, and undirected relationship lines.</desc>
+<rect width="1750" height="1790" fill="#ffffff"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#203044">
+<text x="60" y="44" font-size="34" font-weight="700" text-anchor="start" fill="#203044">Muster | Core entity–relationship model</text>
+<text x="60" y="93" font-size="17" font-weight="400" text-anchor="start" fill="#556577">Physical MongoDB collections • logical relationships and database uniqueness • focused registration and payment view</text>
+<path d="M 60,125 L 1690,125" fill="none" stroke="#c8d2dd" stroke-width="1.7"/>
+<path d="M 875,434 L 875,575" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 883.0,441.0 L 867.0,441.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 883.0,449.0 L 867.0,449.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 867.0,574.0 L 875.0,560.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 875.0,574.0 L 875.0,560.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 883.0,574.0 L 875.0,560.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="875.0" cy="550.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="891.75" y="492" width="56.5" height="25" fill="white"/>
+<text x="920" y="509" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">leads</text>
+<path d="M 275,684 L 275,920" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 283.0,691.0 L 267.0,691.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 283.0,699.0 L 267.0,699.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 267.0,919.0 L 275.0,905.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 275.0,919.0 L 275.0,905.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 283.0,919.0 L 275.0,905.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="275.0" cy="895.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="297.15" y="788" width="85.7" height="25" fill="white"/>
+<text x="340" y="805" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">has teams</text>
+<path d="M 490,460 L 550,460 L 550,675 L 660,675" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 497.0,452.0 L 497.0,468.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 505.0,452.0 L 505.0,468.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 659.0,683.0 L 645.0,675.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 659.0,675.0 L 645.0,675.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 659.0,667.0 L 645.0,675.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="635.0" cy="675.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="502.55" y="542" width="114.89999999999999" height="25" fill="white"/>
+<text x="560" y="559" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">registrations</text>
+<path d="M 490,1000 L 590,1000 L 590,790 L 660,790" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 497.0,992.0 L 497.0,1008.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="511.0" cy="1000.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<path d="M 653.0,798.0 L 653.0,782.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="639.0" cy="790.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="509.55" y="879" width="114.89999999999999" height="25" fill="white"/>
+<text x="567" y="896" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">optional team</text>
+<path d="M 1090,675 L 1190,675 L 1190,460 L 1260,460" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1097.0,667.0 L 1097.0,683.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1105.0,667.0 L 1105.0,683.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1259.0,468.0 L 1245.0,460.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1259.0,460.0 L 1245.0,460.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1259.0,452.0 L 1245.0,460.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1235.0" cy="460.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1125.25" y="542" width="129.5" height="25" fill="white"/>
+<text x="1190" y="559" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">payment history</text>
+<path d="M 1090,790 L 1150,790 L 1150,1020 L 1260,1020" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1097.0,782.0 L 1097.0,798.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1105.0,782.0 L 1105.0,798.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1253.0,1028.0 L 1253.0,1012.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1239.0" cy="1020.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1093.9" y="881" width="122.2" height="25" fill="white"/>
+<text x="1155" y="898" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">checkout order</text>
+<path d="M 1475,714 L 1475,940" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 1483.0,715.0 L 1475.0,729.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1475.0,715.0 L 1475.0,729.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1467.0,715.0 L 1475.0,729.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1475.0" cy="739.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<path d="M 1467.0,933.0 L 1483.0,933.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="1475.0" cy="919.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="1490.25" y="813" width="129.5" height="25" fill="white"/>
+<text x="1555" y="830" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">gateway receipt</text>
+<path d="M 875,909 L 875,1110" fill="none" stroke="#45566a" stroke-width="1.7" stroke-dasharray="7 5"/>
+<path d="M 883.0,916.0 L 867.0,916.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 883.0,924.0 L 867.0,924.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 867.0,1109.0 L 875.0,1095.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 875.0,1109.0 L 875.0,1095.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 883.0,1109.0 L 875.0,1095.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="875.0" cy="1085.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<rect x="904.7" y="1001" width="180.6" height="25" fill="white"/>
+<text x="995" y="1018" font-size="14" font-weight="400" text-anchor="middle" fill="#556577">issues personal passes</text>
+<rect x="660" y="160" width="430" height="274" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="660" y="160" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="674" y="186" font-size="20" font-weight="700">User</text>
+<text x="674" y="209" font-size="13" fill="#556577">collection: users</text>
+<rect x="660" y="224" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="245" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="743" y="245" font-size="15">_id</text>
+<text x="1078" y="245" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="660" y="254" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="275" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="743" y="275" font-size="15">email</text>
+<text x="1078" y="275" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="660" y="284" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="305" font-size="13" font-weight="700" fill="#1f456c">UQ?</text>
+<text x="743" y="305" font-size="15">googleSubject</text>
+<text x="1078" y="305" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="660" y="314" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="335" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="335" font-size="15">name</text>
+<text x="1078" y="335" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="660" y="344" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="365" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="365" font-size="15">role / isActive</text>
+<text x="1078" y="365" font-size="12" text-anchor="end" fill="#556577">enum / bool</text>
+<rect x="660" y="374" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="395" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="395" font-size="15">passwordHash</text>
+<text x="1078" y="395" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="660" y="404" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="425" font-size="13" font-weight="700" fill="#1f456c">FK[]</text>
+<text x="743" y="425" font-size="15">assignedEvents</text>
+<text x="1078" y="425" font-size="12" text-anchor="end" fill="#556577">Event[]</text>
+<rect x="60" y="380" width="430" height="304" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="60" y="380" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="74" y="406" font-size="20" font-weight="700">Event</text>
+<text x="74" y="429" font-size="13" fill="#556577">collection: events</text>
+<rect x="60" y="444" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="465" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="143" y="465" font-size="15">_id</text>
+<text x="478" y="465" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="60" y="474" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="495" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="143" y="495" font-size="15">slug</text>
+<text x="478" y="495" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="60" y="504" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="525" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="525" font-size="15">name / category</text>
+<text x="478" y="525" font-size="12" text-anchor="end" fill="#556577">string / enum</text>
+<rect x="60" y="534" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="555" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="555" font-size="15">participationType</text>
+<text x="478" y="555" font-size="12" text-anchor="end" fill="#556577">enum</text>
+<rect x="60" y="564" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="585" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="585" font-size="15">minTeamSize / maxTeamSize</text>
+<text x="478" y="585" font-size="12" text-anchor="end" fill="#556577">number</text>
+<rect x="60" y="594" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="615" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="615" font-size="15">feeInr</text>
+<text x="478" y="615" font-size="12" text-anchor="end" fill="#556577">number</text>
+<rect x="60" y="624" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="645" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="645" font-size="15">eventDate / venue</text>
+<text x="478" y="645" font-size="12" text-anchor="end" fill="#556577">date / string</text>
+<rect x="60" y="654" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="675" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="675" font-size="15">status / maxSlots</text>
+<text x="478" y="675" font-size="12" text-anchor="end" fill="#556577">enum / number?</text>
+<rect x="60" y="920" width="430" height="304" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="60" y="920" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="74" y="946" font-size="20" font-weight="700">Team</text>
+<text x="74" y="969" font-size="13" fill="#556577">collection: teams</text>
+<rect x="60" y="984" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1005" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="143" y="1005" font-size="15">_id</text>
+<text x="478" y="1005" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="60" y="1014" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1035" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="143" y="1035" font-size="15">eventId</text>
+<text x="478" y="1035" font-size="12" text-anchor="end" fill="#556577">Event</text>
+<rect x="60" y="1044" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1065" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="143" y="1065" font-size="15">leaderId</text>
+<text x="478" y="1065" font-size="12" text-anchor="end" fill="#556577">User</text>
+<rect x="60" y="1074" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1095" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="143" y="1095" font-size="15">joinCode</text>
+<text x="478" y="1095" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="60" y="1104" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1125" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="1125" font-size="15">teamName</text>
+<text x="478" y="1125" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="60" y="1134" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1155" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="1155" font-size="15">members[]</text>
+<text x="478" y="1155" font-size="12" text-anchor="end" fill="#556577">embedded</text>
+<rect x="60" y="1164" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1185" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="143" y="1185" font-size="15">status / rosterVersion</text>
+<text x="478" y="1185" font-size="12" text-anchor="end" fill="#556577">enum / number</text>
+<rect x="60" y="1194" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="72" y="1215" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="143" y="1215" font-size="15">mergedIntoTeamId</text>
+<text x="478" y="1215" font-size="12" text-anchor="end" fill="#556577">Team?</text>
+<rect x="660" y="575" width="430" height="334" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="660" y="575" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="674" y="601" font-size="20" font-weight="700">Registration</text>
+<text x="674" y="624" font-size="13" fill="#556577">collection: registrations</text>
+<rect x="660" y="639" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="660" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="743" y="660" font-size="15">_id</text>
+<text x="1078" y="660" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="660" y="669" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="690" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="743" y="690" font-size="15">regId</text>
+<text x="1078" y="690" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="660" y="699" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="720" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="743" y="720" font-size="15">eventId</text>
+<text x="1078" y="720" font-size="12" text-anchor="end" fill="#556577">Event</text>
+<rect x="660" y="729" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="750" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="743" y="750" font-size="15">leaderId</text>
+<text x="1078" y="750" font-size="12" text-anchor="end" fill="#556577">User</text>
+<rect x="660" y="759" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="780" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="743" y="780" font-size="15">teamId</text>
+<text x="1078" y="780" font-size="12" text-anchor="end" fill="#556577">Team?</text>
+<rect x="660" y="789" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="810" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="743" y="810" font-size="15">paymentId</text>
+<text x="1078" y="810" font-size="12" text-anchor="end" fill="#556577">Payment?</text>
+<rect x="660" y="819" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="840" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="840" font-size="15">feeSnapshotInr</text>
+<text x="1078" y="840" font-size="12" text-anchor="end" fill="#556577">number</text>
+<rect x="660" y="849" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="870" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="870" font-size="15">status / nocStatus</text>
+<text x="1078" y="870" font-size="12" text-anchor="end" fill="#556577">enum</text>
+<rect x="660" y="879" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="900" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="900" font-size="15">refundReviewStatus</text>
+<text x="1078" y="900" font-size="12" text-anchor="end" fill="#556577">enum?</text>
+<rect x="1260" y="380" width="430" height="334" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="1260" y="380" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="1274" y="406" font-size="20" font-weight="700">Payment</text>
+<text x="1274" y="429" font-size="13" fill="#556577">collection: payments</text>
+<rect x="1260" y="444" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="465" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="1343" y="465" font-size="15">_id</text>
+<text x="1678" y="465" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="1260" y="474" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="495" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="1343" y="495" font-size="15">registrationId</text>
+<text x="1678" y="495" font-size="12" text-anchor="end" fill="#556577">Registration</text>
+<rect x="1260" y="504" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="525" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="1343" y="525" font-size="15">eventId / payerId</text>
+<text x="1678" y="525" font-size="12" text-anchor="end" fill="#556577">Event / User</text>
+<rect x="1260" y="534" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="555" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1343" y="555" font-size="15">gatewayOrderId</text>
+<text x="1678" y="555" font-size="12" text-anchor="end" fill="#556577">GatewayOrder?</text>
+<rect x="1260" y="564" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="585" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1343" y="585" font-size="15">provider</text>
+<text x="1678" y="585" font-size="12" text-anchor="end" fill="#556577">enum</text>
+<rect x="1260" y="594" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="615" font-size="13" font-weight="700" fill="#1f456c">UQ?</text>
+<text x="1343" y="615" font-size="15">providerPaymentId</text>
+<text x="1678" y="615" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="1260" y="624" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="645" font-size="13" font-weight="700" fill="#1f456c">UQ?</text>
+<text x="1343" y="645" font-size="15">utr</text>
+<text x="1678" y="645" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="1260" y="654" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="675" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1343" y="675" font-size="15">amountInr / status</text>
+<text x="1678" y="675" font-size="12" text-anchor="end" fill="#556577">number / enum</text>
+<rect x="1260" y="684" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="705" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1343" y="705" font-size="15">reviewedBy</text>
+<text x="1678" y="705" font-size="12" text-anchor="end" fill="#556577">User?</text>
+<rect x="1260" y="940" width="430" height="304" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="1260" y="940" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="1274" y="966" font-size="20" font-weight="700">GatewayOrder</text>
+<text x="1274" y="989" font-size="13" fill="#556577">collection: gatewayorders</text>
+<rect x="1260" y="1004" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1025" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="1343" y="1025" font-size="15">_id</text>
+<text x="1678" y="1025" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="1260" y="1034" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1055" font-size="13" font-weight="700" fill="#1f456c">FK,UQ</text>
+<text x="1343" y="1055" font-size="15">registrationId</text>
+<text x="1678" y="1055" font-size="12" text-anchor="end" fill="#556577">Registration</text>
+<rect x="1260" y="1064" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1085" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="1343" y="1085" font-size="15">eventId / payerId</text>
+<text x="1678" y="1085" font-size="12" text-anchor="end" fill="#556577">Event / User</text>
+<rect x="1260" y="1094" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1115" font-size="13" font-weight="700" fill="#1f456c">UQ?</text>
+<text x="1343" y="1115" font-size="15">providerOrderId</text>
+<text x="1678" y="1115" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="1260" y="1124" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1145" font-size="13" font-weight="700" fill="#1f456c">UQ?</text>
+<text x="1343" y="1145" font-size="15">providerPaymentId</text>
+<text x="1678" y="1145" font-size="12" text-anchor="end" fill="#556577">string?</text>
+<rect x="1260" y="1154" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1175" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="1343" y="1175" font-size="15">paymentId</text>
+<text x="1678" y="1175" font-size="12" text-anchor="end" fill="#556577">Payment?</text>
+<rect x="1260" y="1184" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1205" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1343" y="1205" font-size="15">amountPaise / currency</text>
+<text x="1678" y="1205" font-size="12" text-anchor="end" fill="#556577">number / enum</text>
+<rect x="1260" y="1214" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="1272" y="1235" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="1343" y="1235" font-size="15">status / settledAt</text>
+<text x="1678" y="1235" font-size="12" text-anchor="end" fill="#556577">enum / date?</text>
+<rect x="660" y="1110" width="430" height="274" fill="white" stroke="#45566a" stroke-width="1.6"/>
+<rect x="660" y="1110" width="430" height="64" fill="#eaf0f6" stroke="#45566a" stroke-width="1.6"/>
+<text x="674" y="1136" font-size="20" font-weight="700">Pass</text>
+<text x="674" y="1159" font-size="13" fill="#556577">collection: passes</text>
+<rect x="660" y="1174" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1195" font-size="13" font-weight="700" fill="#1f456c">PK</text>
+<text x="743" y="1195" font-size="15">_id</text>
+<text x="1078" y="1195" font-size="12" text-anchor="end" fill="#556577">ObjectId</text>
+<rect x="660" y="1204" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1225" font-size="13" font-weight="700" fill="#1f456c">UQ</text>
+<text x="743" y="1225" font-size="15">passId / token</text>
+<text x="1078" y="1225" font-size="12" text-anchor="end" fill="#556577">string</text>
+<rect x="660" y="1234" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1255" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="743" y="1255" font-size="15">registrationId</text>
+<text x="1078" y="1255" font-size="12" text-anchor="end" fill="#556577">Registration</text>
+<rect x="660" y="1264" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1285" font-size="13" font-weight="700" fill="#1f456c">FK</text>
+<text x="743" y="1285" font-size="15">eventId / userId</text>
+<text x="1078" y="1285" font-size="12" text-anchor="end" fill="#556577">Event / User</text>
+<rect x="660" y="1294" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1315" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="1315" font-size="15">status / checkInStatus</text>
+<text x="1078" y="1315" font-size="12" text-anchor="end" fill="#556577">enum</text>
+<rect x="660" y="1324" width="430" height="30" fill="#f7f9fb" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1345" font-size="13" font-weight="700" fill="#1f456c"></text>
+<text x="743" y="1345" font-size="15">checkedInAt / expiresAt</text>
+<text x="1078" y="1345" font-size="12" text-anchor="end" fill="#556577">date?</text>
+<rect x="660" y="1354" width="430" height="30" fill="#ffffff" stroke="#dbe2ea" stroke-width="0.65"/>
+<text x="672" y="1375" font-size="13" font-weight="700" fill="#1f456c">FK?</text>
+<text x="743" y="1375" font-size="15">scannedBy</text>
+<text x="1078" y="1375" font-size="12" text-anchor="end" fill="#556577">User?</text>
+<path d="M 60,1450 L 1690,1450" fill="none" stroke="#c8d2dd" stroke-width="1.7"/>
+<text x="60" y="1482" font-size="16" font-weight="700" text-anchor="start" fill="#203044">NOTATION</text>
+<path d="M 60,1517 L 132,1517" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 67.0,1509.0 L 67.0,1525.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 75.0,1509.0 L 75.0,1525.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<text x="148" y="1523" font-size="14" font-weight="400" text-anchor="start" fill="#203044">1  Exactly one</text>
+<path d="M 380,1517 L 452,1517" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 387.0,1509.0 L 387.0,1525.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="401.0" cy="1517.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<text x="468" y="1523" font-size="14" font-weight="400" text-anchor="start" fill="#203044">0..1  Zero or one</text>
+<path d="M 700,1517 L 772,1517" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1509.0 L 715.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1517.0 L 715.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 701.0,1525.0 L 715.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<circle cx="725.0" cy="1517.0" r="5" stroke="#45566a" stroke-width="1.7" fill="white"/>
+<text x="788" y="1523" font-size="14" font-weight="400" text-anchor="start" fill="#203044">0..*  Zero or many</text>
+<path d="M 1020,1517 L 1092,1517" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1509.0 L 1035.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1517.0 L 1035.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1021.0,1525.0 L 1035.0,1517.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<path d="M 1045.0,1509.0 L 1045.0,1525.0" fill="none" stroke="#45566a" stroke-width="1.7"/>
+<text x="1108" y="1523" font-size="14" font-weight="400" text-anchor="start" fill="#203044">1..*  One or many</text>
+<text x="60" y="1561" font-size="14" font-weight="400" text-anchor="start" fill="#203044">PK = document identifier   UQ = unique index   FK = logical ObjectId reference   ? = nullable / optional</text>
+<text x="60" y="1592" font-size="14" font-weight="400" text-anchor="start" fill="#203044">Dashed = non-identifying reference; each document has its own _id. Solid = embedded ownership, not a separate collection.</text>
+<text x="60" y="1628" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Composite UQ: Registration(eventId, leaderId); Registration(eventId, teamId) when teamId exists; Pass(registrationId, userId); Team(teamName, eventId).</text>
+<text x="60" y="1657" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Registration.paymentId and GatewayOrder.paymentId select a receipt; they do not replace Payment history. A manual receipt may have no gateway order.</text>
+<text x="60" y="1686" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Team ↔ Registration is optional on both sides; solo registrations have no team. Team membership is detailed in the supporting view.</text>
+<text x="60" y="1715" font-size="14" font-weight="400" text-anchor="start" fill="#556577">Only lifecycle relationships are drawn. Other role-based refs remain in rows; the documentation catalogs every ObjectId relationship.</text>
+<text x="60" y="1744" font-size="14" font-weight="400" text-anchor="start" fill="#556577">FK denotes an application reference, not an SQL foreign-key constraint. Required refs plus service consistency define logical cardinality.</text>
 </g></svg>

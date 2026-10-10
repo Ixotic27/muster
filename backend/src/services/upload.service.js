@@ -19,7 +19,7 @@ function uploadFile(file, folder) {
   }));
 }
 
-function uploadPaymentScreenshot(file) { return uploadFile(file, 'eventflow/payments'); }
-function uploadNocDocument(file) { return uploadFile(file, 'eventflow/noc'); }
+function uploadPaymentScreenshot(file) { return uploadFile(file, 'muster/payments'); }
+function uploadNocDocument(file) { return uploadFile(file, 'muster/noc'); }
 
 module.exports = { uploadFile, uploadPaymentScreenshot, uploadNocDocument };

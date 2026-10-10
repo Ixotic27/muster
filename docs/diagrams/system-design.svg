@@ -1,103 +1,138 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="1400" viewBox="0 0 1520 1400" role="img" aria-labelledby="title desc">
-<title id="title">EventFlow · High-level system design</title><desc id="desc">Participant journey: account → team / solo registration → verified payment → personal pass → staff check-in.</desc>
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8293ad"/></marker></defs>
-<rect width="1520" height="1400" fill="#f4f7fb"/>
-<g font-family="Arial, sans-serif">
-<text x="60" y="65" font-size="32" font-weight="700" fill="#14233b">EventFlow · High-level system design</text>
-<text x="60" y="106" font-size="17" fill="#52627a">Participant journey: account → team / solo registration → verified payment → personal pass → staff check-in.</text>
-<path d="M 390,297.5 L 530,297.5" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="403.75" y="271.5" width="112.5" height="24" rx="5" fill="#f4f7fb"/><text x="460.0" y="288.5" text-anchor="middle" font-size="13" fill="#52627a">HTTPS · session</text>
-<path d="M 930,297.5 L 1110,297.5" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="975.0" y="271.5" width="90.0" height="24" rx="5" fill="#f4f7fb"/><text x="1020.0" y="288.5" text-anchor="middle" font-size="13" fill="#52627a">transactions</text>
-<path d="M 225,405 L 225,610" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="242.5" y="490" width="135.0" height="24" rx="5" fill="#f4f7fb"/><text x="310" y="507" text-anchor="middle" font-size="13" fill="#52627a">public order + key</text>
-<path d="M 730,405 L 730,610" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="733.75" y="490" width="172.5" height="24" rx="5" fill="#f4f7fb"/><text x="820" y="507" text-anchor="middle" font-size="13" fill="#52627a">create / fetch / verify</text>
-<path d="M 390,717.5 L 530,717.5" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="403.75" y="691.5" width="112.5" height="24" rx="5" fill="#f4f7fb"/><text x="460.0" y="708.5" text-anchor="middle" font-size="13" fill="#52627a">capture payment</text>
-<path d="M 1285,405 L 1285,610" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="1310.0" y="490" width="120.0" height="24" rx="5" fill="#f4f7fb"/><text x="1370" y="507" text-anchor="middle" font-size="13" fill="#52627a">durable EmailJob</text>
-<path d="M 930,690 L 990,690 L 990,470 L 870,470 L 870,405" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="920.0" y="543" width="150.0" height="24" rx="5" fill="#f4f7fb"/><text x="995" y="560" text-anchor="middle" font-size="13" fill="#52627a">signed webhook → API</text>
-<path d="M 1285,825 L 1285,1000" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="1303.75" y="903" width="172.5" height="24" rx="5" fill="#f4f7fb"/><text x="1390" y="920" text-anchor="middle" font-size="13" fill="#52627a">SMTP · accepted / retry</text>
-<path d="M 60,1090 L 25,1090 L 25,150 L 650,150 L 650,190" fill="none" stroke="#8293ad" stroke-width="2"  marker-end="url(#arrow)"/>
-<rect x="361.5" y="125" width="165.0" height="24" rx="5" fill="#f4f7fb"/><text x="444" y="142" text-anchor="middle" font-size="13" fill="#52627a">authenticated check-in</text>
-<path d="M 930,1090 L 1010,1090 L 1010,770 L 1110,770" fill="none" stroke="#8293ad" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
-<rect x="897.75" y="920" width="202.5" height="24" rx="5" fill="#f4f7fb"/><text x="999" y="937" text-anchor="middle" font-size="13" fill="#52627a">independent scheduled retry</text>
-<rect x="60" y="190" width="330" height="215" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="62" y="192" width="326" height="49" rx="10" fill="#2855d9"/>
-<rect x="62" y="219" width="326" height="22" fill="#2855d9"/>
-<text x="80" y="223" font-size="19" font-weight="700" fill="white">Participants &amp; staff</text>
-<text x="80" y="270" font-size="15" fill="#14233b">Browse / account / teams</text>
-<text x="80" y="297" font-size="15" fill="#14233b">Registration &amp; checkout</text>
-<text x="80" y="324" font-size="15" fill="#14233b">My passes / staff scanner</text>
-<text x="80" y="351" font-size="15" fill="#14233b">Admin / event manager</text>
-<rect x="530" y="190" width="400" height="215" rx="12" fill="white" stroke="#2855d9" stroke-width="2"/>
-<rect x="532" y="192" width="396" height="49" rx="10" fill="#2855d9"/>
-<rect x="532" y="219" width="396" height="22" fill="#2855d9"/>
-<text x="550" y="223" font-size="19" font-weight="700" fill="white">Express API</text>
-<text x="550" y="270" font-size="15" fill="#14233b">Authentication + role scope</text>
-<text x="550" y="297" font-size="15" fill="#14233b">Event / team / registration</text>
-<text x="550" y="324" font-size="15" fill="#14233b">Gateway verification + refunds</text>
-<text x="550" y="351" font-size="15" fill="#14233b">Private files + signed passes</text>
-<rect x="1110" y="190" width="350" height="215" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="1112" y="192" width="346" height="49" rx="10" fill="#087f78"/>
-<rect x="1112" y="219" width="346" height="22" fill="#087f78"/>
-<text x="1130" y="223" font-size="19" font-weight="700" fill="white">MongoDB replica set</text>
-<text x="1130" y="270" font-size="15" fill="#14233b">Users / events / teams</text>
-<text x="1130" y="297" font-size="15" fill="#14233b">Registration / payment / passes</text>
-<text x="1130" y="324" font-size="15" fill="#14233b">Notifications + durable outbox</text>
-<text x="1130" y="351" font-size="15" fill="#14233b">Transactions + unique indexes</text>
-<rect x="60" y="610" width="330" height="215" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="62" y="612" width="326" height="49" rx="10" fill="#087f78"/>
-<rect x="62" y="639" width="326" height="22" fill="#087f78"/>
-<text x="80" y="643" font-size="19" font-weight="700" fill="white">Razorpay Checkout</text>
-<text x="80" y="690" font-size="15" fill="#14233b">Hosted payment interface</text>
-<text x="80" y="717" font-size="15" fill="#14233b">Public key + server order</text>
-<text x="80" y="744" font-size="15" fill="#14233b">Browser callback is untrusted</text>
-<text x="80" y="771" font-size="15" fill="#14233b">No card data stored locally</text>
-<rect x="530" y="610" width="400" height="215" rx="12" fill="white" stroke="#087f78" stroke-width="2"/>
-<rect x="532" y="612" width="396" height="49" rx="10" fill="#087f78"/>
-<rect x="532" y="639" width="396" height="22" fill="#087f78"/>
-<text x="550" y="643" font-size="19" font-weight="700" fill="white">Razorpay API &amp; webhook</text>
-<text x="550" y="690" font-size="15" fill="#14233b">Server creates amount/order</text>
-<text x="550" y="717" font-size="15" fill="#14233b">Verify capture + order + currency</text>
-<text x="550" y="744" font-size="15" fill="#14233b">Raw-body webhook signature</text>
-<text x="550" y="771" font-size="15" fill="#14233b">Idempotent local settlement</text>
-<rect x="1110" y="610" width="350" height="215" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
-<rect x="1112" y="612" width="346" height="49" rx="10" fill="#a6640c"/>
-<rect x="1112" y="639" width="346" height="22" fill="#a6640c"/>
-<text x="1130" y="643" font-size="19" font-weight="700" fill="white">Email dispatcher / worker</text>
-<text x="1130" y="690" font-size="15" fill="#14233b">Commit first → deliver second</text>
-<text x="1130" y="717" font-size="15" fill="#14233b">Lease / retry / expiry / dedupe</text>
-<text x="1130" y="744" font-size="15" fill="#14233b">Recheck recipient access</text>
-<text x="1130" y="771" font-size="15" fill="#14233b">One job per lifecycle message</text>
-<rect x="1110" y="1000" width="350" height="210" rx="12" fill="white" stroke="#a6640c" stroke-width="2"/>
-<rect x="1112" y="1002" width="346" height="49" rx="10" fill="#a6640c"/>
-<rect x="1112" y="1029" width="346" height="22" fill="#a6640c"/>
-<text x="1130" y="1033" font-size="19" font-weight="700" fill="white">Configured SMTP provider</text>
-<text x="1130" y="1080" font-size="15" fill="#14233b">TLS + verified sender domain</text>
-<text x="1130" y="1107" font-size="15" fill="#14233b">Responsive HTML + plain text</text>
-<text x="1130" y="1134" font-size="15" fill="#14233b">Receipt / pass / invite / reset</text>
-<text x="1130" y="1161" font-size="15" fill="#14233b">Delivery depends on provider</text>
-<rect x="60" y="1000" width="330" height="210" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
-<rect x="62" y="1002" width="326" height="49" rx="10" fill="#7951b0"/>
-<rect x="62" y="1029" width="326" height="22" fill="#7951b0"/>
-<text x="80" y="1033" font-size="19" font-weight="700" fill="white">Authorized event scanner</text>
-<text x="80" y="1080" font-size="15" fill="#14233b">Camera / image / typed token</text>
-<text x="80" y="1107" font-size="15" fill="#14233b">Validate signature &amp; live status</text>
-<text x="80" y="1134" font-size="15" fill="#14233b">Atomic first check-in wins</text>
-<text x="80" y="1161" font-size="15" fill="#14233b">Event-scoped staff access</text>
-<rect x="530" y="1000" width="400" height="210" rx="12" fill="white" stroke="#7951b0" stroke-width="2"/>
-<rect x="532" y="1002" width="396" height="49" rx="10" fill="#7951b0"/>
-<rect x="532" y="1029" width="396" height="22" fill="#7951b0"/>
-<text x="550" y="1033" font-size="19" font-weight="700" fill="white">Operator configuration</text>
-<text x="550" y="1080" font-size="15" fill="#14233b">Secrets only on backend</text>
-<text x="550" y="1107" font-size="15" fill="#14233b">HTTPS / exact origins / backups</text>
-<text x="550" y="1134" font-size="15" fill="#14233b">Worker scheduling + health</text>
-<text x="550" y="1161" font-size="15" fill="#14233b">Manual refund evidence</text>
-<text x="60" y="1284" font-size="15" fill="#52627a">Payment settlement and email enqueue are transactional. A callback or webhook replay must not duplicate passes or mail.</text>
-<text x="60" y="1324" font-size="15" fill="#52627a">Request-time mail delivery is best effort; a separately scheduled worker retries persisted jobs after failures.</text>
-<text x="60" y="1364" font-size="15" fill="#52627a">Optional manual payment/document review remains available. No real payment credentials or participant data ship with this template.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1930" height="1500" viewBox="0 0 1930 1500" role="img" aria-labelledby="title desc">
+<title id="title">Muster | Container architecture (C4 · Level 2)</title><desc id="desc">Backend building blocks and integration boundaries. The included frontend is a replaceable demonstration and checking client.</desc>
+<defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#25547c"/></marker>
+<marker id="blue-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#25547c"/></marker>
+<marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#5c6570"/></marker>
+<marker id="grey-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#5c6570"/></marker>
+<marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1e706a"/></marker>
+<marker id="teal-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#1e706a"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="60" y="63.52" font-size="28" font-weight="700" text-anchor="start" fill="#526174">Muster | Container architecture (C4 · Level 2)</text>
+<text x="60" y="105.94" font-size="16" font-weight="400" text-anchor="start" fill="#526174">Backend building blocks and integration boundaries. The included frontend is a replaceable demonstration and checking client.</text>
+<rect x="790" y="150" width="1080" height="870" fill="none" stroke="#748193" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="805" y="178" font-size="16" font-weight="700" fill="#142438">MUSTER BACKEND · logical ownership boundary</text>
+<circle cx="125.0" cy="272" r="16" fill="white" stroke="#142438" stroke-width="2"/>
+<path d="M 125.0,288 L 125.0,325 M 98.0,301 L 152.0,301 M 125.0,325 L 101.0,354 M 125.0,325 L 149.0,354" fill="none" stroke="#142438" stroke-width="2"/>
+<text x="125.0" y="379.78" font-size="17" font-weight="700" text-anchor="middle" fill="#142438">Participants / staff</text>
+<text x="125.0" y="405.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">[Person]</text>
+<text x="125.0" y="437.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Role-scoped workflows</text>
+<text x="125.0" y="461.76" font-size="14" font-weight="400" text-anchor="middle" fill="#526174">Scanner is a staff UI</text>
+<rect x="330" y="240" width="340" height="290" fill="#f1f6f8" stroke="#25547c" stroke-width="2"/>
+<text x="500.0" y="277" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Reference frontend</text>
+<text x="500.0" y="303" text-anchor="middle" font-size="14" fill="#526174">[Demo client · React 18 / Vite]</text>
+<text x="500.0" y="343" text-anchor="middle" font-size="15" fill="#142438">Replaceable API consumer</text>
+<text x="500.0" y="370" text-anchor="middle" font-size="15" fill="#142438">Static bundle; runs in user&#x27;s browser</text>
+<text x="500.0" y="397" text-anchor="middle" font-size="15" fill="#142438">Checks registration / staff workflows</text>
+<text x="500.0" y="424" text-anchor="middle" font-size="15" fill="#142438">Hosts Razorpay Checkout</text>
+<text x="500.0" y="451" text-anchor="middle" font-size="15" fill="#142438">Camera / image QR scanning</text>
+<rect x="830" y="240" width="400" height="370" fill="#f1f6f8" stroke="#25547c" stroke-width="2"/>
+<text x="1030.0" y="277" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Application API</text>
+<text x="1030.0" y="303" text-anchor="middle" font-size="14" fill="#526174">[Container · Node.js / Express]</text>
+<text x="1030.0" y="343" text-anchor="middle" font-size="15" fill="#142438">Single modular monolith</text>
+<text x="1030.0" y="370" text-anchor="middle" font-size="15" fill="#142438">JWT cookie / bearer + live user check</text>
+<text x="1030.0" y="397" text-anchor="middle" font-size="15" fill="#142438">Role and assigned-event authorization</text>
+<text x="1030.0" y="424" text-anchor="middle" font-size="15" fill="#142438">Registration / payment / pass services</text>
+<text x="1030.0" y="451" text-anchor="middle" font-size="15" fill="#142438">Signature + provider capture checks</text>
+<text x="1030.0" y="478" text-anchor="middle" font-size="15" fill="#142438">Atomic settlement and first check-in</text>
+<text x="1030.0" y="505" text-anchor="middle" font-size="15" fill="#142438">Outbox insertion + post-commit send</text>
+<path d="M 1430,258 C 1430,234 1810,234 1810,258 L 1810,512 C 1810,536 1430,536 1430,512 Z" fill="#f1f6f8" stroke="#1e706a" stroke-width="2"/>
+<path d="M 1430,258 C 1430,282 1810,282 1810,258" fill="none" stroke="#1e706a" stroke-width="2"/>
+<text x="1620.0" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Application database</text>
+<text x="1620.0" y="314" text-anchor="middle" font-size="14" fill="#526174">[Container · MongoDB replica set]</text>
+<text x="1620.0" y="354" text-anchor="middle" font-size="15" fill="#142438">Users, events, teams, registrations</text>
+<text x="1620.0" y="381" text-anchor="middle" font-size="15" fill="#142438">Gateway orders, receipts, passes</text>
+<text x="1620.0" y="408" text-anchor="middle" font-size="15" fill="#142438">Notifications, EmailJob outbox</text>
+<text x="1620.0" y="435" text-anchor="middle" font-size="15" fill="#142438">Transactions and unique indexes</text>
+<text x="1620.0" y="462" text-anchor="middle" font-size="15" fill="#142438">Leases / retries / audit records</text>
+<rect x="1430" y="720" width="380" height="250" fill="#f1f6f8" stroke="#25547c" stroke-width="2"/>
+<text x="1620.0" y="757" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Email worker</text>
+<text x="1620.0" y="783" text-anchor="middle" font-size="14" fill="#526174">[Container · Node.js process]</text>
+<text x="1620.0" y="823" text-anchor="middle" font-size="15" fill="#142438">Polls durable EmailJob outbox</text>
+<text x="1620.0" y="850" text-anchor="middle" font-size="15" fill="#142438">Leases, retry, deduplication</text>
+<text x="1620.0" y="877" text-anchor="middle" font-size="15" fill="#142438">Rechecks current access / expiry</text>
+<text x="1620.0" y="904" text-anchor="middle" font-size="15" fill="#142438">Shared email renderer + processor</text>
+<text x="1620.0" y="931" text-anchor="middle" font-size="15" fill="#142438">Continuous poll or one-shot job</text>
+<rect x="330" y="590" width="330" height="175" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="495.0" y="627" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Google Identity</text>
+<text x="495.0" y="653" text-anchor="middle" font-size="14" fill="#526174">[External system · optional]</text>
+<text x="495.0" y="693" text-anchor="middle" font-size="15" fill="#142438">OAuth 2.0 · verified email</text>
+<text x="495.0" y="720" text-anchor="middle" font-size="15" fill="#142438">Signed state checked by API</text>
+<text x="495.0" y="747" text-anchor="middle" font-size="15" fill="#142438">Enabled only with configured keys</text>
+<rect x="330" y="815" width="340" height="175" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="500.0" y="852" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Adopter-built client</text>
+<text x="500.0" y="878" text-anchor="middle" font-size="14" fill="#526174">[Integration option · not shipped]</text>
+<text x="500.0" y="918" text-anchor="middle" font-size="15" fill="#142438">Custom web / mobile / staff client</text>
+<text x="500.0" y="945" text-anchor="middle" font-size="15" fill="#142438">Uses the same authenticated API</text>
+<text x="500.0" y="972" text-anchor="middle" font-size="15" fill="#142438">Backend rules remain authoritative</text>
+<rect x="830" y="1140" width="380" height="220" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="1020.0" y="1177" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">Razorpay</text>
+<text x="1020.0" y="1203" text-anchor="middle" font-size="14" fill="#526174">[External system]</text>
+<text x="1020.0" y="1243" text-anchor="middle" font-size="15" fill="#142438">Hosted Checkout + payment API</text>
+<text x="1020.0" y="1270" text-anchor="middle" font-size="15" fill="#142438">Orders use server-owned amount</text>
+<text x="1020.0" y="1297" text-anchor="middle" font-size="15" fill="#142438">Raw-body signed webhook events</text>
+<text x="1020.0" y="1324" text-anchor="middle" font-size="15" fill="#142438">Test mode is the template default</text>
+<rect x="1430" y="1140" width="380" height="220" fill="#f4f4f4" stroke="#5c6570" stroke-width="2"/>
+<text x="1620.0" y="1177" text-anchor="middle" font-size="20" font-weight="700" fill="#142438">SMTP provider</text>
+<text x="1620.0" y="1203" text-anchor="middle" font-size="14" fill="#526174">[External system]</text>
+<text x="1620.0" y="1243" text-anchor="middle" font-size="15" fill="#142438">SMTP over TLS / STARTTLS</text>
+<text x="1620.0" y="1270" text-anchor="middle" font-size="15" fill="#142438">Configured sender identity</text>
+<text x="1620.0" y="1297" text-anchor="middle" font-size="15" fill="#142438">HTML + plain text / QR attachment</text>
+<text x="1620.0" y="1324" text-anchor="middle" font-size="15" fill="#142438">Messages leave after commit</text>
+<path d="M 225,370 L 330,370" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="230" y="333" width="85" height="25" fill="white"/>
+<text x="272.5" y="350.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Uses</text>
+<path d="M 670,370 L 830,370" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="675" y="308" width="150" height="25" fill="white"/>
+<text x="750.0" y="325.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">HTTPS /api/v1</text>
+<rect x="675" y="336" width="150" height="25" fill="white"/>
+<text x="750.0" y="353.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">JWT cookie / bearer</text>
+<rect x="673" y="386" width="154" height="25" fill="white"/>
+<text x="750.0" y="403.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Socket.IO notifications</text>
+<path d="M 330,470 L 270,470 L 270,1245 L 830,1245" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="360" y="1160" width="350" height="25" fill="white"/>
+<text x="535.0" y="1177.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Hosted Checkout / HTTPS</text>
+<rect x="335" y="1191" width="400" height="25" fill="white"/>
+<text x="535.0" y="1208.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Public key + server-created order</text>
+<path d="M 1230,370 L 1430,370" fill="none" stroke="#1e706a" stroke-width="2" marker-start="url(#teal-start)" marker-end="url(#teal)"/>
+<rect x="1235" y="328" width="190" height="25" fill="white"/>
+<text x="1330.0" y="345.26" font-size="14" font-weight="400" text-anchor="middle" fill="#1e706a">Mongoose / Mongo wire</text>
+<rect x="1235" y="388" width="190" height="25" fill="white"/>
+<text x="1330.0" y="405.26" font-size="14" font-weight="400" text-anchor="middle" fill="#1e706a">Read / write / transaction</text>
+<path d="M 1620,720 L 1620,530" fill="none" stroke="#1e706a" stroke-width="2" marker-start="url(#teal-start)" marker-end="url(#teal)"/>
+<rect x="1465" y="578" width="310" height="25" fill="white"/>
+<text x="1620.0" y="595.26" font-size="14" font-weight="400" text-anchor="middle" fill="#1e706a">Claim / update EmailJob</text>
+<rect x="1450" y="609" width="340" height="25" fill="white"/>
+<text x="1620.0" y="626.26" font-size="14" font-weight="400" text-anchor="middle" fill="#1e706a">WorkerLease + delivery status</text>
+<path d="M 1620,970 L 1620,1140" fill="none" stroke="#5c6570" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#grey)"/>
+<rect x="1470" y="1058" width="310" height="25" fill="white"/>
+<text x="1625.0" y="1075.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">Background send / retry</text>
+<path d="M 1230,570 L 1300,570 L 1300,1245 L 1430,1245" fill="none" stroke="#5c6570" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#grey)"/>
+<rect x="1210" y="802" width="220" height="25" fill="white"/>
+<text x="1320.0" y="819.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">Post-commit send attempt</text>
+<rect x="1217" y="831" width="210" height="25" fill="white"/>
+<text x="1322.0" y="848.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">(awaited, best effort)</text>
+<path d="M 930,610 L 930,1140" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="805" y="738" width="250" height="25" fill="white"/>
+<text x="930.0" y="755.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">Create order / fetch capture</text>
+<rect x="805" y="767" width="250" height="25" fill="white"/>
+<text x="930.0" y="784.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">HTTPS + server credentials</text>
+<path d="M 1120,1140 L 1120,610" fill="none" stroke="#5c6570" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#grey)"/>
+<rect x="999" y="934" width="288" height="25" fill="white"/>
+<text x="1143.0" y="951.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">POST /payments/gateway/webhook</text>
+<rect x="997" y="963" width="290" height="25" fill="white"/>
+<text x="1142.0" y="980.26" font-size="14" font-weight="400" text-anchor="middle" fill="#5c6570">HMAC(raw body) → API re-fetch</text>
+<path d="M 830,490 L 740,490 L 740,675 L 660,675" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="668" y="585" width="140" height="25" fill="white"/>
+<text x="738.0" y="602.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">OAuth / HTTPS</text>
+<path d="M 670,900 L 775,900 L 775,560 L 830,560" fill="none" stroke="#25547c" stroke-width="2" marker-end="url(#blue)"/>
+<rect x="680" y="911" width="105" height="25" fill="white"/>
+<text x="732.5" y="928.26" font-size="14" font-weight="400" text-anchor="middle" fill="#25547c">REST /api/v1</text>
+<text x="810" y="208.92" font-size="13" font-weight="400" text-anchor="start" fill="#526174">API and worker share the queue processor. MongoDB stores the outbox; there is no separate message broker.</text>
+<text x="60" y="1407.6" font-size="15" font-weight="700" text-anchor="start" fill="#142438">Notation</text>
+<text x="240" y="1407.26" font-size="14" font-weight="400" text-anchor="start" fill="#526174">Blue solid: synchronous request · Teal solid: database I/O (both ways) · Grey dashed: payment webhook / email delivery</text>
+<text x="60" y="1447.26" font-size="14" font-weight="400" text-anchor="start" fill="#526174">Trust: browser payment callbacks do not settle a registration; the API verifies order, amount, currency, signature and capture.</text>
+<text x="60" y="1480.26" font-size="14" font-weight="400" text-anchor="start" fill="#526174">Deployment: API runtime + worker/scheduler + MongoDB replica set. Host the reference frontend only when needed; no cloud vendor is required.</text>
 </g></svg>

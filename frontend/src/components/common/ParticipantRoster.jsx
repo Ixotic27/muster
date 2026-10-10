@@ -52,7 +52,7 @@ export default function ParticipantRoster({
     setDownloading(true);
     setError('');
     try {
-      await downloadRoster(endpoint + '/export?' + params.toString(), 'eventflow-' + (eventId || 'participants') + '-' + filter + '.csv');
+      await downloadRoster(endpoint + '/export?' + params.toString(), 'muster-' + (eventId || 'participants') + '-' + filter + '.csv');
     } catch (err) {
       setError(err.message);
     } finally {

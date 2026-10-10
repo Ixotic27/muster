@@ -1,7 +1,7 @@
 {
-  "name": "event-management-api",
+  "name": "muster-api",
   "version": "1.0.0",
-  "description": "Reusable event registration, payments, email and attendance API",
+  "description": "Muster event registration, payment, email and attendance backend",
   "main": "server.js",
   "engines": {
     "node": ">=20"
